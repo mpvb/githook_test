@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "Test mpvb 6 - A guide to XPO's REST APIs",
+    "title": "Test mpvb 7 - A guide to XPO's REST APIs",
     "description": "\n# Introduction \nWelcome to XPO's open API explorer! Here, you have the ability to discover the possibilities that XPO has to offer through our suite of open APIs\n\nOur APIs are built on modern REST principles, and will enable you to drive success for your organization by directly integrating information from XPO's transportation ecosystem to your own applications. \n- **Key features are:** \n * On-demand access to real-time market rates, across multiple modes of transportation. \n * Ability to convert rate quotes to live orders. \n\nIn this page, you'll find the information regarding all of our available APIs, their operations, along with complete details on parameters, requests and response formats.\n\nAre you looking for an API capability that we don't yet offer? Please reach out to us at apionboarding@xpo.com and let us know what you're looking for. We are continuously working to offer new integration capabilities for our customers and partners."
   },
   "servers": [
