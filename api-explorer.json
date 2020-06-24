@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "Test Githook Paula Testing type error 3 - A guide to XPO's REST APIs",
+    "title": "Test - A guide to XPO's REST APIs",
     "description": "\n# Introduction \nWelcome to XPO's open API explorer! Here, you have the ability to discover the possibilities that XPO has to offer through our suite of open APIs\n\nOur APIs are built on modern REST principles, and will enable you to drive success for your organization by directly integrating information from XPO's transportation ecosystem to your own applications. \n- **Key features are:** \n * On-demand access to real-time market rates, across multiple modes of transportation. \n * Ability to convert rate quotes to live orders. \n\nIn this page, you'll find the information regarding all of our available APIs, their operations, along with complete details on parameters, requests and response formats.\n\nAre you looking for an API capability that we don't yet offer? Please reach out to us at apionboarding@xpo.com and let us know what you're looking for. We are continuously working to offer new integration capabilities for our customers and partners."
   },
   "servers": [
@@ -153,7 +153,6 @@
           }
         ],
         "requestBody": {
-          "description": "[JSON]Quote Request.",
           "required": true,
           "content": {
             "application/json": {
@@ -256,7 +255,6 @@
           }
         ],
         "requestBody": {
-          "description": "[JSON]Convert Quote Request.",
           "required": true,
           "content": {
             "application/json": {
@@ -269,19 +267,19 @@
         "x-code-samples": [
           {
             "lang": "Curl",
-            "source": "curl --location --request POST 'https:\/\/api-uat-xpoconnect.xpo.com\/quoteAPI\/rest\/v1\/ConvertToOrder' \\\r\n--header 'x-api-key: XXXXXXXXXXXXXXXXXXXXXXXXXXX' \\\r\n--header 'xpoauthorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX' \\\r\n--header 'Content-Type: application\/json' \\\r\n--data-raw '{\r\n    \"orderDate\": \"2020-02-13T12:08:09.31\",\r\n    \"accountId\": 223,\r\n    \"contractId\": null,\r\n    \"specialRequirements\": [],\r\n    \"orderReferenceNumbers\": [\r\n        {\r\n            \"code\": \"PO\",\r\n            \"type\": \"PO\",\r\n            \"value\": \"8525\"\r\n        }\r\n    ],\r\n    \"orderNotes\": [\r\n        {\r\n            \"type\": \"Reason\",\r\n            \"value\": \"BRNCH FLT\\\/MAX CAPACTY\"\r\n        }\r\n    ],\r\n    \"orderContactInformations\": [\r\n        {\r\n            \"firstName\": \"TestData\",\r\n            \"lastName\": \"Lname\",\r\n            \"email\": \"devcustomer@gmail.com(opens in new tab)\",\r\n            \"phoneNumbers\": [\r\n                {\r\n                    \"type\": \"Mobile\",\r\n                    \"number\": \"6606546565\"\r\n                }\r\n            ],\r\n            \"title\": \"Mr\",\r\n            \"isPrimary\": true\r\n        }\r\n    ],\r\n    \"orderServices\": [\r\n        {\r\n            \"code\": \"12151\",\r\n            \"name\": \"Room of Choice Delivery\",\r\n            \"description\": \"Base delivery charge for IKEA.\",\r\n            \"quantity\": 1,\r\n            \"unitofMeasure\": \"Items Hauled Away\"\r\n        }\r\n    ],\r\n    \"orderDocuments\": [\r\n        {\r\n            \"type\": \"30\",\r\n            \"name\": \"28-FEB-2019.xlsx\",\r\n            \"key\": \"0000040VD7CES000000000\"\r\n        }\r\n    ],\r\n    \"crossSellOrderNumber\": \"\",\r\n    \"salesReps\": [\r\n        {\r\n            \"firstName\": \"TestData\",\r\n            \"lastName\": \"Lname\",\r\n            \"email\": \"devcustomer@gmail.com(opens in new tab)\",\r\n            \"phoneNumbers\": [\r\n                {\r\n                    \"type\": \"Mobile\",\r\n                    \"number\": \"6606546565\"\r\n                }\r\n            ],\r\n            \"title\": \"\",\r\n            \"isPrimary\": false\r\n        }\r\n    ],\r\n    \"stops\": [\r\n        {\r\n            \"addressInformation\": {\r\n                \"locationId\": \"TESTCH30\",\r\n                \"locationName\": \"Test 1\",\r\n                \"locationType\": \"Warehouse\",\r\n                \"addressLine1\": \"1800 North Clybourn Avenue\",\r\n                \"addressLine2\": \"\",\r\n                \"cityName\": \"Chicago\",\r\n                \"countryCode\": \"USA\",\r\n                \"geoCodes\": {\r\n                    \"longitude\": null,\r\n                    \"latitude\": null,\r\n                    \"s2cellId\": null\r\n                },\r\n                \"stateCode\": \"IL\",\r\n                \"zipCode\": \"60606\",\r\n                \"region\": null,\r\n                \"utcOffset\": \"-04:00:00\"\r\n            },\r\n            \"scheduledTimeFrom\": \"2020-11-25T21:23:53\",\r\n            \"stopSequence\": 1,\r\n            \"scheduledTimeTo\": null,\r\n            \"type\": \"PICKUP\",\r\n            \"isAppointmentRequired\": false,\r\n            \"isAppointmentConfirmed\": false,\r\n            \"specialRequirements\": [\r\n                {\r\n                    \"type\": \"LIFTGATE\",\r\n                    \"value\": \"1\"\r\n                }\r\n            ],\r\n            \"stopReferenceNumbers\": [\r\n                {\r\n                    \"code\": \"PO\",\r\n                    \"type\": \"PO\",\r\n                    \"value\": \"8525\"\r\n                }\r\n            ],\r\n            \"stopNotes\": [\r\n                {\r\n                    \"type\": \"Reason\",\r\n                    \"value\": \"BRNCH FLT\\\/MAX CAPACTY\"\r\n                }\r\n            ],\r\n            \"stopContactInformations\": [\r\n                {\r\n                    \"firstName\": \"TestData\",\r\n                    \"lastName\": \"Lname\",\r\n                    \"email\": \"devcustomer@gmail.com\",\r\n                    \"phoneNumbers\": [\r\n                        {\r\n                            \"type\": \"Mobile\",\r\n                            \"number\": \"7894561230\"\r\n                        }\r\n                    ],\r\n                    \"title\": \"\",\r\n                    \"isPrimary\": true\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"addressInformation\": {\r\n                \"locationId\": \"TESTNOO8\",\r\n                \"locationName\": \"Test 2\",\r\n                \"locationType\": \"Warehouse\",\r\n                \"addressLine1\": \"North Ridgeville Soccer Complex\",\r\n                \"addressLine2\": \"\",\r\n                \"cityName\": \"North Ridgeville\",\r\n                \"countryCode\": \"USA\",\r\n                \"geoCodes\": {\r\n                    \"longitude\": null,\r\n                    \"latitude\": null,\r\n                    \"s2cellId\": null\r\n                },\r\n                \"stateCode\": \"OH\",\r\n                \"zipCode\": \"44039\",\r\n                \"region\": null,\r\n                \"utcOffset\": \"-04:00:00\"\r\n            },\r\n            \"scheduledTimeFrom\": \"2020-12-14T22:23:53\",\r\n            \"stopSequence\": 2,\r\n            \"scheduledTimeTo\": null,\r\n            \"type\": \"DELIVERY\",\r\n            \"isAppointmentRequired\": false,\r\n            \"isAppointmentConfirmed\": false,\r\n            \"specialRequirements\": [\r\n                {\r\n                    \"type\": \"LIFTGATE\",\r\n                    \"value\": \"1\"\r\n                }\r\n            ],\r\n            \"stopReferenceNumbers\": [\r\n                {\r\n                    \"code\": \"PO\",\r\n                    \"type\": \"PO\",\r\n                    \"value\": \"8525\"\r\n                }\r\n            ],\r\n            \"stopNotes\": [\r\n                {\r\n                    \"type\": \"Reason\",\r\n                    \"value\": \"BRNCH FLT\\\/MAX CAPACTY\"\r\n                }\r\n            ],\r\n            \"stopContactInformations\": [\r\n                {\r\n                    \"firstName\": \"TestData \",\r\n                    \"lastName\": \"SO\",\r\n                    \"email\": \"devcustomer@gmail.com\",\r\n                    \"phoneNumbers\": [\r\n                        {\r\n                            \"type\": \"Mobile\",\r\n                            \"number\": \"3312244433\"\r\n                        }\r\n                    ],\r\n                    \"title\": \"\",\r\n                    \"isPrimary\": true\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"requestedDeliveryDate\": \"2020-02-27T15:00:00\",\r\n    \"transportationMode\": \"TL\",\r\n    \"items\": [\r\n        {\r\n            \"itemCode\": \"OTHER\",\r\n            \"itemNumber\": \"100056006\",\r\n            \"itemDescription\": \"CONCRETE BUCKET 1\\\/2 YD\",\r\n            \"units\": 15,\r\n            \"unitTypeCode\": \"PLTS\",\r\n            \"packageUnits\": 2,\r\n            \"packageTypeCode\": \"BAG\",\r\n            \"weight\": 4000,\r\n            \"weightUomCode\": \"LB\",\r\n            \"height\": 99.998999999999995225152815692126750946044921875,\r\n            \"heightUomCode\": \"IN\",\r\n            \"length\": 99,\r\n            \"lengthUomCode\": \"IN\",\r\n            \"width\": 150,\r\n            \"widthUomCode\": \"IN\",\r\n            \"declaredValue\": 4000,\r\n            \"declaredValueCurrencyCode\": \"USD\",\r\n            \"volume\": 868.0385999999999739884515292942523956298828125,\r\n            \"volumeUomCode\": \"CUFT\",\r\n            \"itemPrice\": 20.5,\r\n            \"itemPriceCurrencyCode\": \"USD\",\r\n            \"isTemperatureControlled\": false,\r\n            \"temperatureInformation\": {\r\n                \"high\": null,\r\n                \"low\": null,\r\n                \"highUom\": null,\r\n                \"lowUom\": null\r\n            },\r\n            \"isHazmat\": false,\r\n            \"hazardousItemInfo\": {\r\n                \"unnumber\": 0,\r\n                \"packingGroup\": null,\r\n                \"receptacleSize\": 0,\r\n                \"hazardousClass\": null,\r\n                \"numberofReceptacles\": 0,\r\n                \"unitofMeasure\": null,\r\n                \"containerType\": null,\r\n                \"hazardousDescription\": null,\r\n                \"hazardousPhoneNumber\": null,\r\n                \"shippingName\": null\r\n            },\r\n            \"htscode\": null,\r\n            \"sku\": \"Sku00001\",\r\n            \"purchaseOrderNumber\": null,\r\n            \"isOversized\": null,\r\n            \"isStackable\": null,\r\n            \"itemReferenceNumbers\": [\r\n                {\r\n                    \"code\": \"AN\",\r\n                    \"type\": \"AN\",\r\n                    \"value\": \"8525 - GRANDE PRAIRIE PRO\"\r\n                }\r\n            ],\r\n            \"itemNotes\": [\r\n                {\r\n                    \"type\": \"Reason\",\r\n                    \"value\": \"BRNCH FLT\\\/MAX CAPACTY\"\r\n                }\r\n            ],\r\n            \"itemServices\": [\r\n                {\r\n                    \"code\": \"12151\",\r\n                    \"name\": \"Room of Choice Delivery\",\r\n                    \"description\": \"Base delivery charge for IKEA.\",\r\n                    \"quantity\": 1,\r\n                    \"unitofMeasure\": \"Items Hauled Away\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"isPartOfConsolidatedShipment\": false,\r\n    \"ordersOnConsolidatedShipment\": 1,\r\n    \"isExpedited\": false,\r\n    \"isXpoManaged\": true,\r\n    \"paymentCode\": \"PPD\",\r\n    \"equipmentTypeCode\": \"DT\",\r\n    \"equipmentCategoryCode\": \"VN\",\r\n    \"quoteId\": \"0000183774\",\r\n    \"invoiceDate\": null,\r\n    \"invoiceNumber\": null,\r\n    \"applicationSource\": \"GPAPI\",\r\n    \"emailBol\": true,\r\n    \"partnerIdentifierCode\": \"2-1-HEATDEIA\"\r\n}'"
+            "source": "curl --location --request POST 'https:\/\/api-uat-xpoconnect.xpo.com\/quoteAPI\/rest\/v1\/ConvertToOrder' \\\r\n--header 'x-api-key: XXXXXXXXXXXXXXXXXXXXXXXXXXX' \\\r\n--header 'xpoauthorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX' \\\r\n--header 'Content-Type: application\/json' \\\r\n--data-raw '{\r\n    \"orderDate\": \"2020-02-13T12:08:09.31\",\r\n    \"accountId\": 223,\r\n    \"contractId\": null,\r\n    \"specialRequirements\": [],\r\n    \"orderReferenceNumbers\": [\r\n        {\r\n            \"code\": \"PO\",\r\n            \"type\": \"PO\",\r\n            \"value\": \"8525\"\r\n        }\r\n    ],\r\n    \"orderNotes\": [\r\n        {\r\n            \"type\": \"Reason\",\r\n            \"value\": \"BRNCH FLT\\\/MAX CAPACTY\"\r\n        }\r\n    ],\r\n    \"orderContactInformations\": [\r\n        {\r\n            \"firstName\": \"TestData\",\r\n            \"lastName\": \"Lname\",\r\n            \"email\": \"devcustomer@gmail.com(opens in new tab)\",\r\n            \"phoneNumbers\": [\r\n                {\r\n                    \"type\": \"Mobile\",\r\n                    \"number\": \"6606546565\"\r\n                }\r\n            ],\r\n            \"title\": \"Mr\",\r\n            \"isPrimary\": true\r\n        }\r\n    ],\r\n    \"orderServices\": [\r\n        {\r\n            \"code\": \"12151\",\r\n            \"name\": \"Room of Choice Delivery\",\r\n            \"description\": \"Base delivery charge for IKEA.\",\r\n            \"quantity\": 1,\r\n            \"unitofMeasure\": \"Items Hauled Away\"\r\n        }\r\n    ],\r\n    \"orderDocuments\": [\r\n        {\r\n            \"type\": \"30\",\r\n            \"name\": \"28-FEB-2019.xlsx\",\r\n            \"key\": \"0000040VD7CES000000000\"\r\n        }\r\n    ],\r\n    \"crossSellOrderNumber\": \"\",\r\n    \"salesReps\": [\r\n        {\r\n            \"firstName\": \"TestData\",\r\n            \"lastName\": \"Lname\",\r\n            \"email\": \"devcustomer@gmail.com(opens in new tab)\",\r\n            \"phoneNumbers\": [\r\n                {\r\n                    \"type\": \"Mobile\",\r\n                    \"number\": \"6606546565\"\r\n                }\r\n            ],\r\n            \"title\": \"\",\r\n            \"isPrimary\": false\r\n        }\r\n    ],\r\n    \"stops\": [\r\n        {\r\n            \"addressInformation\": {\r\n                \"locationId\": \"TESTCH30\",\r\n                \"locationName\": \"Test 1\",\r\n                \"locationType\": \"Warehouse\",\r\n                \"addressLine1\": \"1800 North Clybourn Avenue\",\r\n                \"addressLine2\": \"\",\r\n                \"cityName\": \"Chicago\",\r\n                \"countryCode\": \"USA\",\r\n                \"geoCodes\": {\r\n                    \"longitude\": null,\r\n                    \"latitude\": null,\r\n                    \"s2cellId\": null\r\n                },\r\n                \"stateCode\": \"IL\",\r\n                \"zipCode\": \"60606\",\r\n                \"region\": null,\r\n                \"utcOffset\": \"-04:00:00\"\r\n            },\r\n            \"scheduledTimeFrom\": \"2020-11-25T21:23:53\",\r\n            \"sequenceNo\": 1,\r\n            \"scheduledTimeTo\": null,\r\n            \"type\": \"PICKUP\",\r\n            \"isAppointmentRequired\": false,\r\n            \"isAppointmentConfirmed\": false,\r\n            \"specialRequirements\": [\r\n                {\r\n                    \"type\": \"LIFTGATE\",\r\n                    \"value\": \"1\"\r\n                }\r\n            ],\r\n            \"stopReferenceNumbers\": [\r\n                {\r\n                    \"code\": \"PO\",\r\n                    \"type\": \"PO\",\r\n                    \"value\": \"8525\"\r\n                }\r\n            ],\r\n            \"note\": [\r\n                {\r\n                    \"type\": \"Reason\",\r\n                    \"value\": \"BRNCH FLT\\\/MAX CAPACTY\"\r\n                }\r\n            ],\r\n            \"stopContactInformations\": [\r\n                {\r\n                    \"firstName\": \"TestData\",\r\n                    \"lastName\": \"Lname\",\r\n                    \"email\": \"devcustomer@gmail.com\",\r\n                    \"phoneNumbers\": [\r\n                        {\r\n                            \"type\": \"Mobile\",\r\n                            \"number\": \"7894561230\"\r\n                        }\r\n                    ],\r\n                    \"title\": \"\",\r\n                    \"isPrimary\": true\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"addressInformation\": {\r\n                \"locationId\": \"TESTNOO8\",\r\n                \"locationName\": \"Test 2\",\r\n                \"locationType\": \"Warehouse\",\r\n                \"addressLine1\": \"North Ridgeville Soccer Complex\",\r\n                \"addressLine2\": \"\",\r\n                \"cityName\": \"North Ridgeville\",\r\n                \"countryCode\": \"USA\",\r\n                \"geoCodes\": {\r\n                    \"longitude\": null,\r\n                    \"latitude\": null,\r\n                    \"s2cellId\": null\r\n                },\r\n                \"stateCode\": \"OH\",\r\n                \"zipCode\": \"44039\",\r\n                \"region\": null,\r\n                \"utcOffset\": \"-04:00:00\"\r\n            },\r\n            \"scheduledTimeFrom\": \"2020-12-14T22:23:53\",\r\n            \"sequenceNo\": 2,\r\n            \"scheduledTimeTo\": null,\r\n            \"type\": \"DELIVERY\",\r\n            \"isAppointmentRequired\": false,\r\n            \"isAppointmentConfirmed\": false,\r\n            \"specialRequirements\": [\r\n                {\r\n                    \"type\": \"LIFTGATE\",\r\n                    \"value\": \"1\"\r\n                }\r\n            ],\r\n            \"stopReferenceNumbers\": [\r\n                {\r\n                    \"code\": \"PO\",\r\n                    \"type\": \"PO\",\r\n                    \"value\": \"8525\"\r\n                }\r\n            ],\r\n            \"note\": [\r\n                {\r\n                    \"type\": \"Reason\",\r\n                    \"value\": \"BRNCH FLT\\\/MAX CAPACTY\"\r\n                }\r\n            ],\r\n            \"stopContactInformations\": [\r\n                {\r\n                    \"firstName\": \"TestData \",\r\n                    \"lastName\": \"SO\",\r\n                    \"email\": \"devcustomer@gmail.com\",\r\n                    \"phoneNumbers\": [\r\n                        {\r\n                            \"type\": \"Mobile\",\r\n                            \"number\": \"3312244433\"\r\n                        }\r\n                    ],\r\n                    \"title\": \"\",\r\n                    \"isPrimary\": true\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"requestedDeliveryDate\": \"2020-02-27T15:00:00\",\r\n    \"transportationMode\": \"TL\",\r\n    \"items\": [\r\n        {\r\n            \"itemCode\": \"OTHER\",\r\n            \"itemNumber\": \"100056006\",\r\n            \"itemDescription\": \"CONCRETE BUCKET 1\\\/2 YD\",\r\n            \"units\": 15,\r\n            \"unitTypeCode\": \"PLTS\",\r\n            \"packageUnits\": 2,\r\n            \"packageTypeCode\": \"BAG\",\r\n            \"weight\": 4000,\r\n            \"weightUomCode\": \"LB\",\r\n            \"height\": 99.998999999999995225152815692126750946044921875,\r\n            \"heightUomCode\": \"IN\",\r\n            \"length\": 99,\r\n            \"lengthUomCode\": \"IN\",\r\n            \"width\": 150,\r\n            \"widthUomCode\": \"IN\",\r\n            \"declaredValue\": 4000,\r\n            \"declaredValueCurrencyCode\": \"USD\",\r\n            \"volume\": 868.0385999999999739884515292942523956298828125,\r\n            \"volumeUomCode\": \"CUFT\",\r\n            \"itemPrice\": 20.5,\r\n            \"itemPriceCurrencyCode\": \"USD\",\r\n            \"isTemperatureControlled\": false,\r\n            \"temperatureInformation\": {\r\n                \"high\": null,\r\n                \"low\": null,\r\n                \"highUom\": null,\r\n                \"lowUom\": null\r\n            },\r\n            \"isHazmat\": false,\r\n            \"hazardousItemInfo\": {\r\n                \"unnumber\": 0,\r\n                \"packingGroup\": null,\r\n                \"receptacleSize\": 0,\r\n                \"hazardousClass\": null,\r\n                \"numberofReceptacles\": 0,\r\n                \"unitofMeasure\": null,\r\n                \"containerType\": null,\r\n                \"hazardousDescription\": null,\r\n                \"hazardousPhoneNumber\": null,\r\n                \"shippingName\": null\r\n            },\r\n            \"htscode\": null,\r\n            \"sku\": \"Sku00001\",\r\n            \"purchaseOrderNumber\": null,\r\n            \"isOversized\": null,\r\n            \"isStackable\": null,\r\n            \"itemReferenceNumbers\": [\r\n                {\r\n                    \"code\": \"AN\",\r\n                    \"type\": \"AN\",\r\n                    \"value\": \"8525 - GRANDE PRAIRIE PRO\"\r\n                }\r\n            ],\r\n            \"itemNotes\": [\r\n                {\r\n                    \"type\": \"Reason\",\r\n                    \"value\": \"BRNCH FLT\\\/MAX CAPACTY\"\r\n                }\r\n            ],\r\n            \"itemServices\": [\r\n                {\r\n                    \"code\": \"12151\",\r\n                    \"name\": \"Room of Choice Delivery\",\r\n                    \"description\": \"Base delivery charge for IKEA.\",\r\n                    \"quantity\": 1,\r\n                    \"unitofMeasure\": \"Items Hauled Away\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"isPartOfConsolidatedShipment\": false,\r\n    \"ordersOnConsolidatedShipment\": 1,\r\n    \"isExpedited\": false,\r\n    \"isXpoManaged\": true,\r\n    \"paymentCode\": \"PPD\",\r\n    \"equipmentTypeCode\": \"DT\",\r\n    \"equipmentCategoryCode\": \"VN\",\r\n    \"quoteId\": \"0000183774\",\r\n    \"invoiceDate\": null,\r\n    \"invoiceNumber\": null,\r\n    \"applicationSource\": \"GPAPI\",\r\n    \"emailBol\": true,\r\n    \"partnerIdentifierCode\": \"2-1-HEATDEIA\"\r\n}'"
           },
           {
             "lang": "Java",
-            "source": "OkHttpClient client = new OkHttpClient().newBuilder()\r\n  .build();\r\nMediaType mediaType = MediaType.parse(\"application\/json\");\r\nRequestBody body = RequestBody.create(mediaType, \"{\\r\\n    \\\"orderDate\\\": \\\"2020-02-13T12:08:09.31\\\",\\r\\n    \\\"accountId\\\": 223,\\r\\n    \\\"contractId\\\": null,\\r\\n    \\\"specialRequirements\\\": [],\\r\\n    \\\"orderReferenceNumbers\\\": [\\r\\n        {\\r\\n            \\\"code\\\": \\\"PO\\\",\\r\\n            \\\"type\\\": \\\"PO\\\",\\r\\n            \\\"value\\\": \\\"8525\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderNotes\\\": [\\r\\n        {\\r\\n            \\\"type\\\": \\\"Reason\\\",\\r\\n            \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderContactInformations\\\": [\\r\\n        {\\r\\n            \\\"firstName\\\": \\\"TestData\\\",\\r\\n            \\\"lastName\\\": \\\"Lname\\\",\\r\\n            \\\"email\\\": \\\"devcustomer@gmail.com(opens in new tab)\\\",\\r\\n            \\\"phoneNumbers\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Mobile\\\",\\r\\n                    \\\"number\\\": \\\"6606546565\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"title\\\": \\\"Mr\\\",\\r\\n            \\\"isPrimary\\\": true\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderServices\\\": [\\r\\n        {\\r\\n            \\\"code\\\": \\\"12151\\\",\\r\\n            \\\"name\\\": \\\"Room of Choice Delivery\\\",\\r\\n            \\\"description\\\": \\\"Base delivery charge for IKEA.\\\",\\r\\n            \\\"quantity\\\": 1,\\r\\n            \\\"unitofMeasure\\\": \\\"Items Hauled Away\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderDocuments\\\": [\\r\\n        {\\r\\n            \\\"type\\\": \\\"30\\\",\\r\\n            \\\"name\\\": \\\"28-FEB-2019.xlsx\\\",\\r\\n            \\\"key\\\": \\\"0000040VD7CES000000000\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"crossSellOrderNumber\\\": \\\"\\\",\\r\\n    \\\"salesReps\\\": [\\r\\n        {\\r\\n            \\\"firstName\\\": \\\"TestData\\\",\\r\\n            \\\"lastName\\\": \\\"Lname\\\",\\r\\n            \\\"email\\\": \\\"devcustomer@gmail.com(opens in new tab)\\\",\\r\\n            \\\"phoneNumbers\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Mobile\\\",\\r\\n                    \\\"number\\\": \\\"6606546565\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"title\\\": \\\"\\\",\\r\\n            \\\"isPrimary\\\": false\\r\\n        }\\r\\n    ],\\r\\n    \\\"stops\\\": [\\r\\n        {\\r\\n            \\\"addressInformation\\\": {\\r\\n                \\\"locationId\\\": \\\"TESTCH30\\\",\\r\\n                \\\"locationName\\\": \\\"Test 1\\\",\\r\\n                \\\"locationType\\\": \\\"Warehouse\\\",\\r\\n                \\\"addressLine1\\\": \\\"1800 North Clybourn Avenue\\\",\\r\\n                \\\"addressLine2\\\": \\\"\\\",\\r\\n                \\\"cityName\\\": \\\"Chicago\\\",\\r\\n                \\\"countryCode\\\": \\\"USA\\\",\\r\\n                \\\"geoCodes\\\": {\\r\\n                    \\\"longitude\\\": null,\\r\\n                    \\\"latitude\\\": null,\\r\\n                    \\\"s2cellId\\\": null\\r\\n                },\\r\\n                \\\"stateCode\\\": \\\"IL\\\",\\r\\n                \\\"zipCode\\\": \\\"60606\\\",\\r\\n                \\\"region\\\": null,\\r\\n                \\\"utcOffset\\\": \\\"-04:00:00\\\"\\r\\n            },\\r\\n            \\\"scheduledTimeFrom\\\": \\\"2020-11-25T21:23:53\\\",\\r\\n            \\\"stopSequence\\\": 1,\\r\\n            \\\"scheduledTimeTo\\\": null,\\r\\n            \\\"type\\\": \\\"PICKUP\\\",\\r\\n            \\\"isAppointmentRequired\\\": false,\\r\\n            \\\"isAppointmentConfirmed\\\": false,\\r\\n            \\\"specialRequirements\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"LIFTGATE\\\",\\r\\n                    \\\"value\\\": \\\"1\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"PO\\\",\\r\\n                    \\\"type\\\": \\\"PO\\\",\\r\\n                    \\\"value\\\": \\\"8525\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopNotes\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopContactInformations\\\": [\\r\\n                {\\r\\n                    \\\"firstName\\\": \\\"TestData\\\",\\r\\n                    \\\"lastName\\\": \\\"Lname\\\",\\r\\n                    \\\"email\\\": \\\"devcustomer@gmail.com\\\",\\r\\n                    \\\"phoneNumbers\\\": [\\r\\n                        {\\r\\n                            \\\"type\\\": \\\"Mobile\\\",\\r\\n                            \\\"number\\\": \\\"7894561230\\\"\\r\\n                        }\\r\\n                    ],\\r\\n                    \\\"title\\\": \\\"\\\",\\r\\n                    \\\"isPrimary\\\": true\\r\\n                }\\r\\n            ]\\r\\n        },\\r\\n        {\\r\\n            \\\"addressInformation\\\": {\\r\\n                \\\"locationId\\\": \\\"TESTNOO8\\\",\\r\\n                \\\"locationName\\\": \\\"Test 2\\\",\\r\\n                \\\"locationType\\\": \\\"Warehouse\\\",\\r\\n                \\\"addressLine1\\\": \\\"North Ridgeville Soccer Complex\\\",\\r\\n                \\\"addressLine2\\\": \\\"\\\",\\r\\n                \\\"cityName\\\": \\\"North Ridgeville\\\",\\r\\n                \\\"countryCode\\\": \\\"USA\\\",\\r\\n                \\\"geoCodes\\\": {\\r\\n                    \\\"longitude\\\": null,\\r\\n                    \\\"latitude\\\": null,\\r\\n                    \\\"s2cellId\\\": null\\r\\n                },\\r\\n                \\\"stateCode\\\": \\\"OH\\\",\\r\\n                \\\"zipCode\\\": \\\"44039\\\",\\r\\n                \\\"region\\\": null,\\r\\n                \\\"utcOffset\\\": \\\"-04:00:00\\\"\\r\\n            },\\r\\n            \\\"scheduledTimeFrom\\\": \\\"2020-12-14T22:23:53\\\",\\r\\n            \\\"stopSequence\\\": 2,\\r\\n            \\\"scheduledTimeTo\\\": null,\\r\\n            \\\"type\\\": \\\"DELIVERY\\\",\\r\\n            \\\"isAppointmentRequired\\\": false,\\r\\n            \\\"isAppointmentConfirmed\\\": false,\\r\\n            \\\"specialRequirements\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"LIFTGATE\\\",\\r\\n                    \\\"value\\\": \\\"1\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"PO\\\",\\r\\n                    \\\"type\\\": \\\"PO\\\",\\r\\n                    \\\"value\\\": \\\"8525\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopNotes\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopContactInformations\\\": [\\r\\n                {\\r\\n                    \\\"firstName\\\": \\\"TestData \\\",\\r\\n                    \\\"lastName\\\": \\\"SO\\\",\\r\\n                    \\\"email\\\": \\\"devcustomer@gmail.com\\\",\\r\\n                    \\\"phoneNumbers\\\": [\\r\\n                        {\\r\\n                            \\\"type\\\": \\\"Mobile\\\",\\r\\n                            \\\"number\\\": \\\"3312244433\\\"\\r\\n                        }\\r\\n                    ],\\r\\n                    \\\"title\\\": \\\"\\\",\\r\\n                    \\\"isPrimary\\\": true\\r\\n                }\\r\\n            ]\\r\\n        }\\r\\n    ],\\r\\n    \\\"requestedDeliveryDate\\\": \\\"2020-02-27T15:00:00\\\",\\r\\n    \\\"transportationMode\\\": \\\"TL\\\",\\r\\n    \\\"items\\\": [\\r\\n        {\\r\\n            \\\"itemCode\\\": \\\"OTHER\\\",\\r\\n            \\\"itemNumber\\\": \\\"100056006\\\",\\r\\n            \\\"itemDescription\\\": \\\"CONCRETE BUCKET 1\\\\\/2 YD\\\",\\r\\n            \\\"units\\\": 15,\\r\\n            \\\"unitTypeCode\\\": \\\"PLTS\\\",\\r\\n            \\\"packageUnits\\\": 2,\\r\\n            \\\"packageTypeCode\\\": \\\"BAG\\\",\\r\\n            \\\"weight\\\": 4000,\\r\\n            \\\"weightUomCode\\\": \\\"LB\\\",\\r\\n            \\\"height\\\": 99.998999999999995225152815692126750946044921875,\\r\\n            \\\"heightUomCode\\\": \\\"IN\\\",\\r\\n            \\\"length\\\": 99,\\r\\n            \\\"lengthUomCode\\\": \\\"IN\\\",\\r\\n            \\\"width\\\": 150,\\r\\n            \\\"widthUomCode\\\": \\\"IN\\\",\\r\\n            \\\"declaredValue\\\": 4000,\\r\\n            \\\"declaredValueCurrencyCode\\\": \\\"USD\\\",\\r\\n            \\\"volume\\\": 868.0385999999999739884515292942523956298828125,\\r\\n            \\\"volumeUomCode\\\": \\\"CUFT\\\",\\r\\n            \\\"itemPrice\\\": 20.5,\\r\\n            \\\"itemPriceCurrencyCode\\\": \\\"USD\\\",\\r\\n            \\\"isTemperatureControlled\\\": false,\\r\\n            \\\"temperatureInformation\\\": {\\r\\n                \\\"high\\\": null,\\r\\n                \\\"low\\\": null,\\r\\n                \\\"highUom\\\": null,\\r\\n                \\\"lowUom\\\": null\\r\\n            },\\r\\n            \\\"isHazmat\\\": false,\\r\\n            \\\"hazardousItemInfo\\\": {\\r\\n                \\\"unnumber\\\": 0,\\r\\n                \\\"packingGroup\\\": null,\\r\\n                \\\"receptacleSize\\\": 0,\\r\\n                \\\"hazardousClass\\\": null,\\r\\n                \\\"numberofReceptacles\\\": 0,\\r\\n                \\\"unitofMeasure\\\": null,\\r\\n                \\\"containerType\\\": null,\\r\\n                \\\"hazardousDescription\\\": null,\\r\\n                \\\"hazardousPhoneNumber\\\": null,\\r\\n                \\\"shippingName\\\": null\\r\\n            },\\r\\n            \\\"htscode\\\": null,\\r\\n            \\\"sku\\\": \\\"Sku00001\\\",\\r\\n            \\\"purchaseOrderNumber\\\": null,\\r\\n            \\\"isOversized\\\": null,\\r\\n            \\\"isStackable\\\": null,\\r\\n            \\\"itemReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"AN\\\",\\r\\n                    \\\"type\\\": \\\"AN\\\",\\r\\n                    \\\"value\\\": \\\"8525 - GRANDE PRAIRIE PRO\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"itemNotes\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"itemServices\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"12151\\\",\\r\\n                    \\\"name\\\": \\\"Room of Choice Delivery\\\",\\r\\n                    \\\"description\\\": \\\"Base delivery charge for IKEA.\\\",\\r\\n                    \\\"quantity\\\": 1,\\r\\n                    \\\"unitofMeasure\\\": \\\"Items Hauled Away\\\"\\r\\n                }\\r\\n            ]\\r\\n        }\\r\\n    ],\\r\\n    \\\"isPartOfConsolidatedShipment\\\": false,\\r\\n    \\\"ordersOnConsolidatedShipment\\\": 1,\\r\\n    \\\"isExpedited\\\": false,\\r\\n    \\\"isXpoManaged\\\": true,\\r\\n    \\\"paymentCode\\\": \\\"PPD\\\",\\r\\n    \\\"equipmentTypeCode\\\": \\\"DT\\\",\\r\\n    \\\"equipmentCategoryCode\\\": \\\"VN\\\",\\r\\n    \\\"quoteId\\\": \\\"0000183774\\\",\\r\\n    \\\"invoiceDate\\\": null,\\r\\n    \\\"invoiceNumber\\\": null,\\r\\n    \\\"applicationSource\\\": \\\"GPAPI\\\",\\r\\n    \\\"emailBol\\\": true,\\r\\n    \\\"partnerIdentifierCode\\\": \\\"2-1-HEATDEIA\\\"\\r\\n}\");\r\nRequest request = new Request.Builder()\r\n  .url(\"https:\/\/api-uat-xpoconnect.xpo.com\/quoteAPI\/rest\/v1\/ConvertToOrder\")\r\n  .method(\"POST\", body)\r\n  .addHeader(\"x-api-key\", \"XXXXXXXXXXXXXXXXXXXXXXXXXXX\")\r\n  .addHeader(\"xpoauthorization\", \"Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX\")\r\n  .addHeader(\"Content-Type\", \"application\/json\")\r\n  .build();\r\nResponse response = client.newCall(request).execute();"
+            "source": "OkHttpClient client = new OkHttpClient().newBuilder()\r\n  .build();\r\nMediaType mediaType = MediaType.parse(\"application\/json\");\r\nRequestBody body = RequestBody.create(mediaType, \"{\\r\\n    \\\"orderDate\\\": \\\"2020-02-13T12:08:09.31\\\",\\r\\n    \\\"accountId\\\": 223,\\r\\n    \\\"contractId\\\": null,\\r\\n    \\\"specialRequirements\\\": [],\\r\\n    \\\"orderReferenceNumbers\\\": [\\r\\n        {\\r\\n            \\\"code\\\": \\\"PO\\\",\\r\\n            \\\"type\\\": \\\"PO\\\",\\r\\n            \\\"value\\\": \\\"8525\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderNotes\\\": [\\r\\n        {\\r\\n            \\\"type\\\": \\\"Reason\\\",\\r\\n            \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderContactInformations\\\": [\\r\\n        {\\r\\n            \\\"firstName\\\": \\\"TestData\\\",\\r\\n            \\\"lastName\\\": \\\"Lname\\\",\\r\\n            \\\"email\\\": \\\"devcustomer@gmail.com(opens in new tab)\\\",\\r\\n            \\\"phoneNumbers\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Mobile\\\",\\r\\n                    \\\"number\\\": \\\"6606546565\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"title\\\": \\\"Mr\\\",\\r\\n            \\\"isPrimary\\\": true\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderServices\\\": [\\r\\n        {\\r\\n            \\\"code\\\": \\\"12151\\\",\\r\\n            \\\"name\\\": \\\"Room of Choice Delivery\\\",\\r\\n            \\\"description\\\": \\\"Base delivery charge for IKEA.\\\",\\r\\n            \\\"quantity\\\": 1,\\r\\n            \\\"unitofMeasure\\\": \\\"Items Hauled Away\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderDocuments\\\": [\\r\\n        {\\r\\n            \\\"type\\\": \\\"30\\\",\\r\\n            \\\"name\\\": \\\"28-FEB-2019.xlsx\\\",\\r\\n            \\\"key\\\": \\\"0000040VD7CES000000000\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"crossSellOrderNumber\\\": \\\"\\\",\\r\\n    \\\"salesReps\\\": [\\r\\n        {\\r\\n            \\\"firstName\\\": \\\"TestData\\\",\\r\\n            \\\"lastName\\\": \\\"Lname\\\",\\r\\n            \\\"email\\\": \\\"devcustomer@gmail.com(opens in new tab)\\\",\\r\\n            \\\"phoneNumbers\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Mobile\\\",\\r\\n                    \\\"number\\\": \\\"6606546565\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"title\\\": \\\"\\\",\\r\\n            \\\"isPrimary\\\": false\\r\\n        }\\r\\n    ],\\r\\n    \\\"stops\\\": [\\r\\n        {\\r\\n            \\\"addressInformation\\\": {\\r\\n                \\\"locationId\\\": \\\"TESTCH30\\\",\\r\\n                \\\"locationName\\\": \\\"Test 1\\\",\\r\\n                \\\"locationType\\\": \\\"Warehouse\\\",\\r\\n                \\\"addressLine1\\\": \\\"1800 North Clybourn Avenue\\\",\\r\\n                \\\"addressLine2\\\": \\\"\\\",\\r\\n                \\\"cityName\\\": \\\"Chicago\\\",\\r\\n                \\\"countryCode\\\": \\\"USA\\\",\\r\\n                \\\"geoCodes\\\": {\\r\\n                    \\\"longitude\\\": null,\\r\\n                    \\\"latitude\\\": null,\\r\\n                    \\\"s2cellId\\\": null\\r\\n                },\\r\\n                \\\"stateCode\\\": \\\"IL\\\",\\r\\n                \\\"zipCode\\\": \\\"60606\\\",\\r\\n                \\\"region\\\": null,\\r\\n                \\\"utcOffset\\\": \\\"-04:00:00\\\"\\r\\n            },\\r\\n            \\\"scheduledTimeFrom\\\": \\\"2020-11-25T21:23:53\\\",\\r\\n            \\\"sequenceNo\\\": 1,\\r\\n            \\\"scheduledTimeTo\\\": null,\\r\\n            \\\"type\\\": \\\"PICKUP\\\",\\r\\n            \\\"isAppointmentRequired\\\": false,\\r\\n            \\\"isAppointmentConfirmed\\\": false,\\r\\n            \\\"specialRequirements\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"LIFTGATE\\\",\\r\\n                    \\\"value\\\": \\\"1\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"PO\\\",\\r\\n                    \\\"type\\\": \\\"PO\\\",\\r\\n                    \\\"value\\\": \\\"8525\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"note\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopContactInformations\\\": [\\r\\n                {\\r\\n                    \\\"firstName\\\": \\\"TestData\\\",\\r\\n                    \\\"lastName\\\": \\\"Lname\\\",\\r\\n                    \\\"email\\\": \\\"devcustomer@gmail.com\\\",\\r\\n                    \\\"phoneNumbers\\\": [\\r\\n                        {\\r\\n                            \\\"type\\\": \\\"Mobile\\\",\\r\\n                            \\\"number\\\": \\\"7894561230\\\"\\r\\n                        }\\r\\n                    ],\\r\\n                    \\\"title\\\": \\\"\\\",\\r\\n                    \\\"isPrimary\\\": true\\r\\n                }\\r\\n            ]\\r\\n        },\\r\\n        {\\r\\n            \\\"addressInformation\\\": {\\r\\n                \\\"locationId\\\": \\\"TESTNOO8\\\",\\r\\n                \\\"locationName\\\": \\\"Test 2\\\",\\r\\n                \\\"locationType\\\": \\\"Warehouse\\\",\\r\\n                \\\"addressLine1\\\": \\\"North Ridgeville Soccer Complex\\\",\\r\\n                \\\"addressLine2\\\": \\\"\\\",\\r\\n                \\\"cityName\\\": \\\"North Ridgeville\\\",\\r\\n                \\\"countryCode\\\": \\\"USA\\\",\\r\\n                \\\"geoCodes\\\": {\\r\\n                    \\\"longitude\\\": null,\\r\\n                    \\\"latitude\\\": null,\\r\\n                    \\\"s2cellId\\\": null\\r\\n                },\\r\\n                \\\"stateCode\\\": \\\"OH\\\",\\r\\n                \\\"zipCode\\\": \\\"44039\\\",\\r\\n                \\\"region\\\": null,\\r\\n                \\\"utcOffset\\\": \\\"-04:00:00\\\"\\r\\n            },\\r\\n            \\\"scheduledTimeFrom\\\": \\\"2020-12-14T22:23:53\\\",\\r\\n            \\\"sequenceNo\\\": 2,\\r\\n            \\\"scheduledTimeTo\\\": null,\\r\\n            \\\"type\\\": \\\"DELIVERY\\\",\\r\\n            \\\"isAppointmentRequired\\\": false,\\r\\n            \\\"isAppointmentConfirmed\\\": false,\\r\\n            \\\"specialRequirements\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"LIFTGATE\\\",\\r\\n                    \\\"value\\\": \\\"1\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"PO\\\",\\r\\n                    \\\"type\\\": \\\"PO\\\",\\r\\n                    \\\"value\\\": \\\"8525\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"note\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopContactInformations\\\": [\\r\\n                {\\r\\n                    \\\"firstName\\\": \\\"TestData \\\",\\r\\n                    \\\"lastName\\\": \\\"SO\\\",\\r\\n                    \\\"email\\\": \\\"devcustomer@gmail.com\\\",\\r\\n                    \\\"phoneNumbers\\\": [\\r\\n                        {\\r\\n                            \\\"type\\\": \\\"Mobile\\\",\\r\\n                            \\\"number\\\": \\\"3312244433\\\"\\r\\n                        }\\r\\n                    ],\\r\\n                    \\\"title\\\": \\\"\\\",\\r\\n                    \\\"isPrimary\\\": true\\r\\n                }\\r\\n            ]\\r\\n        }\\r\\n    ],\\r\\n    \\\"requestedDeliveryDate\\\": \\\"2020-02-27T15:00:00\\\",\\r\\n    \\\"transportationMode\\\": \\\"TL\\\",\\r\\n    \\\"items\\\": [\\r\\n        {\\r\\n            \\\"itemCode\\\": \\\"OTHER\\\",\\r\\n            \\\"itemNumber\\\": \\\"100056006\\\",\\r\\n            \\\"itemDescription\\\": \\\"CONCRETE BUCKET 1\\\\\/2 YD\\\",\\r\\n            \\\"units\\\": 15,\\r\\n            \\\"unitTypeCode\\\": \\\"PLTS\\\",\\r\\n            \\\"packageUnits\\\": 2,\\r\\n            \\\"packageTypeCode\\\": \\\"BAG\\\",\\r\\n            \\\"weight\\\": 4000,\\r\\n            \\\"weightUomCode\\\": \\\"LB\\\",\\r\\n            \\\"height\\\": 99.998999999999995225152815692126750946044921875,\\r\\n            \\\"heightUomCode\\\": \\\"IN\\\",\\r\\n            \\\"length\\\": 99,\\r\\n            \\\"lengthUomCode\\\": \\\"IN\\\",\\r\\n            \\\"width\\\": 150,\\r\\n            \\\"widthUomCode\\\": \\\"IN\\\",\\r\\n            \\\"declaredValue\\\": 4000,\\r\\n            \\\"declaredValueCurrencyCode\\\": \\\"USD\\\",\\r\\n            \\\"volume\\\": 868.0385999999999739884515292942523956298828125,\\r\\n            \\\"volumeUomCode\\\": \\\"CUFT\\\",\\r\\n            \\\"itemPrice\\\": 20.5,\\r\\n            \\\"itemPriceCurrencyCode\\\": \\\"USD\\\",\\r\\n            \\\"isTemperatureControlled\\\": false,\\r\\n            \\\"temperatureInformation\\\": {\\r\\n                \\\"high\\\": null,\\r\\n                \\\"low\\\": null,\\r\\n                \\\"highUom\\\": null,\\r\\n                \\\"lowUom\\\": null\\r\\n            },\\r\\n            \\\"isHazmat\\\": false,\\r\\n            \\\"hazardousItemInfo\\\": {\\r\\n                \\\"unnumber\\\": 0,\\r\\n                \\\"packingGroup\\\": null,\\r\\n                \\\"receptacleSize\\\": 0,\\r\\n                \\\"hazardousClass\\\": null,\\r\\n                \\\"numberofReceptacles\\\": 0,\\r\\n                \\\"unitofMeasure\\\": null,\\r\\n                \\\"containerType\\\": null,\\r\\n                \\\"hazardousDescription\\\": null,\\r\\n                \\\"hazardousPhoneNumber\\\": null,\\r\\n                \\\"shippingName\\\": null\\r\\n            },\\r\\n            \\\"htscode\\\": null,\\r\\n            \\\"sku\\\": \\\"Sku00001\\\",\\r\\n            \\\"purchaseOrderNumber\\\": null,\\r\\n            \\\"isOversized\\\": null,\\r\\n            \\\"isStackable\\\": null,\\r\\n            \\\"itemReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"AN\\\",\\r\\n                    \\\"type\\\": \\\"AN\\\",\\r\\n                    \\\"value\\\": \\\"8525 - GRANDE PRAIRIE PRO\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"itemNotes\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"itemServices\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"12151\\\",\\r\\n                    \\\"name\\\": \\\"Room of Choice Delivery\\\",\\r\\n                    \\\"description\\\": \\\"Base delivery charge for IKEA.\\\",\\r\\n                    \\\"quantity\\\": 1,\\r\\n                    \\\"unitofMeasure\\\": \\\"Items Hauled Away\\\"\\r\\n                }\\r\\n            ]\\r\\n        }\\r\\n    ],\\r\\n    \\\"isPartOfConsolidatedShipment\\\": false,\\r\\n    \\\"ordersOnConsolidatedShipment\\\": 1,\\r\\n    \\\"isExpedited\\\": false,\\r\\n    \\\"isXpoManaged\\\": true,\\r\\n    \\\"paymentCode\\\": \\\"PPD\\\",\\r\\n    \\\"equipmentTypeCode\\\": \\\"DT\\\",\\r\\n    \\\"equipmentCategoryCode\\\": \\\"VN\\\",\\r\\n    \\\"quoteId\\\": \\\"0000183774\\\",\\r\\n    \\\"invoiceDate\\\": null,\\r\\n    \\\"invoiceNumber\\\": null,\\r\\n    \\\"applicationSource\\\": \\\"GPAPI\\\",\\r\\n    \\\"emailBol\\\": true,\\r\\n    \\\"partnerIdentifierCode\\\": \\\"2-1-HEATDEIA\\\"\\r\\n}\");\r\nRequest request = new Request.Builder()\r\n  .url(\"https:\/\/api-uat-xpoconnect.xpo.com\/quoteAPI\/rest\/v1\/ConvertToOrder\")\r\n  .method(\"POST\", body)\r\n  .addHeader(\"x-api-key\", \"XXXXXXXXXXXXXXXXXXXXXXXXXXX\")\r\n  .addHeader(\"xpoauthorization\", \"Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX\")\r\n  .addHeader(\"Content-Type\", \"application\/json\")\r\n  .build();\r\nResponse response = client.newCall(request).execute();"
           },
           {
             "lang": "NodeJS",
-            "source": "var request = require('request');\r\nvar options = {\r\n  'method': 'POST',\r\n  'url': 'https:\/\/api-uat-xpoconnect.xpo.com\/quoteAPI\/rest\/v1\/ConvertToOrder',\r\n  'headers': {\r\n    'x-api-key': 'XXXXXXXXXXXXXXXXXXXXXXXXXXX',\r\n    'xpoauthorization': 'Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX',\r\n    'Content-Type': 'application\/json'\r\n  },\r\n  body: JSON.stringify({\"orderDate\":\"2020-02-13T12:08:09.31\",\"accountId\":223,\"contractId\":null,\"specialRequirements\":[],\"orderReferenceNumbers\":[{\"code\":\"PO\",\"type\":\"PO\",\"value\":\"8525\"}],\"orderNotes\":[{\"type\":\"Reason\",\"value\":\"BRNCH FLT\/MAX CAPACTY\"}],\"orderContactInformations\":[{\"firstName\":\"TestData\",\"lastName\":\"Lname\",\"email\":\"devcustomer@gmail.com(opens in new tab)\",\"phoneNumbers\":[{\"type\":\"Mobile\",\"number\":\"6606546565\"}],\"title\":\"Mr\",\"isPrimary\":true}],\"orderServices\":[{\"code\":\"12151\",\"name\":\"Room of Choice Delivery\",\"description\":\"Base delivery charge for IKEA.\",\"quantity\":1,\"unitofMeasure\":\"Items Hauled Away\"}],\"orderDocuments\":[{\"type\":\"30\",\"name\":\"28-FEB-2019.xlsx\",\"key\":\"0000040VD7CES000000000\"}],\"crossSellOrderNumber\":\"\",\"salesReps\":[{\"firstName\":\"TestData\",\"lastName\":\"Lname\",\"email\":\"devcustomer@gmail.com(opens in new tab)\",\"phoneNumbers\":[{\"type\":\"Mobile\",\"number\":\"6606546565\"}],\"title\":\"\",\"isPrimary\":false}],\"stops\":[{\"addressInformation\":{\"locationId\":\"TESTCH30\",\"locationName\":\"Test 1\",\"locationType\":\"Warehouse\",\"addressLine1\":\"1800 North Clybourn Avenue\",\"addressLine2\":\"\",\"cityName\":\"Chicago\",\"countryCode\":\"USA\",\"geoCodes\":{\"longitude\":null,\"latitude\":null,\"s2cellId\":null},\"stateCode\":\"IL\",\"zipCode\":\"60606\",\"region\":null,\"utcOffset\":\"-04:00:00\"},\"scheduledTimeFrom\":\"2020-11-25T21:23:53\",\"stopSequence\":1,\"scheduledTimeTo\":null,\"type\":\"PICKUP\",\"isAppointmentRequired\":false,\"isAppointmentConfirmed\":false,\"specialRequirements\":[{\"type\":\"LIFTGATE\",\"value\":\"1\"}],\"stopReferenceNumbers\":[{\"code\":\"PO\",\"type\":\"PO\",\"value\":\"8525\"}],\"stopNotes\":[{\"type\":\"Reason\",\"value\":\"BRNCH FLT\/MAX CAPACTY\"}],\"stopContactInformations\":[{\"firstName\":\"TestData\",\"lastName\":\"Lname\",\"email\":\"devcustomer@gmail.com\",\"phoneNumbers\":[{\"type\":\"Mobile\",\"number\":\"7894561230\"}],\"title\":\"\",\"isPrimary\":true}]},{\"addressInformation\":{\"locationId\":\"TESTNOO8\",\"locationName\":\"Test 2\",\"locationType\":\"Warehouse\",\"addressLine1\":\"North Ridgeville Soccer Complex\",\"addressLine2\":\"\",\"cityName\":\"North Ridgeville\",\"countryCode\":\"USA\",\"geoCodes\":{\"longitude\":null,\"latitude\":null,\"s2cellId\":null},\"stateCode\":\"OH\",\"zipCode\":\"44039\",\"region\":null,\"utcOffset\":\"-04:00:00\"},\"scheduledTimeFrom\":\"2020-12-14T22:23:53\",\"stopSequence\":2,\"scheduledTimeTo\":null,\"type\":\"DELIVERY\",\"isAppointmentRequired\":false,\"isAppointmentConfirmed\":false,\"specialRequirements\":[{\"type\":\"LIFTGATE\",\"value\":\"1\"}],\"stopReferenceNumbers\":[{\"code\":\"PO\",\"type\":\"PO\",\"value\":\"8525\"}],\"stopNotes\":[{\"type\":\"Reason\",\"value\":\"BRNCH FLT\/MAX CAPACTY\"}],\"stopContactInformations\":[{\"firstName\":\"TestData \",\"lastName\":\"SO\",\"email\":\"devcustomer@gmail.com\",\"phoneNumbers\":[{\"type\":\"Mobile\",\"number\":\"3312244433\"}],\"title\":\"\",\"isPrimary\":true}]}],\"requestedDeliveryDate\":\"2020-02-27T15:00:00\",\"transportationMode\":\"TL\",\"items\":[{\"itemCode\":\"OTHER\",\"itemNumber\":\"100056006\",\"itemDescription\":\"CONCRETE BUCKET 1\/2 YD\",\"units\":15,\"unitTypeCode\":\"PLTS\",\"packageUnits\":2,\"packageTypeCode\":\"BAG\",\"weight\":4000,\"weightUomCode\":\"LB\",\"height\":99.999,\"heightUomCode\":\"IN\",\"length\":99,\"lengthUomCode\":\"IN\",\"width\":150,\"widthUomCode\":\"IN\",\"declaredValue\":4000,\"declaredValueCurrencyCode\":\"USD\",\"volume\":868.0386,\"volumeUomCode\":\"CUFT\",\"itemPrice\":20.5,\"itemPriceCurrencyCode\":\"USD\",\"isTemperatureControlled\":false,\"temperatureInformation\":{\"high\":null,\"low\":null,\"highUom\":null,\"lowUom\":null},\"isHazmat\":false,\"hazardousItemInfo\":{\"unnumber\":0,\"packingGroup\":null,\"receptacleSize\":0,\"hazardousClass\":null,\"numberofReceptacles\":0,\"unitofMeasure\":null,\"containerType\":null,\"hazardousDescription\":null,\"hazardousPhoneNumber\":null,\"shippingName\":null},\"htscode\":null,\"sku\":\"Sku00001\",\"purchaseOrderNumber\":null,\"isOversized\":null,\"isStackable\":null,\"itemReferenceNumbers\":[{\"code\":\"AN\",\"type\":\"AN\",\"value\":\"8525 - GRANDE PRAIRIE PRO\"}],\"itemNotes\":[{\"type\":\"Reason\",\"value\":\"BRNCH FLT\/MAX CAPACTY\"}],\"itemServices\":[{\"code\":\"12151\",\"name\":\"Room of Choice Delivery\",\"description\":\"Base delivery charge for IKEA.\",\"quantity\":1,\"unitofMeasure\":\"Items Hauled Away\"}]}],\"isPartOfConsolidatedShipment\":false,\"ordersOnConsolidatedShipment\":1,\"isExpedited\":false,\"isXpoManaged\":true,\"paymentCode\":\"PPD\",\"equipmentTypeCode\":\"DT\",\"equipmentCategoryCode\":\"VN\",\"quoteId\":\"0000183774\",\"invoiceDate\":null,\"invoiceNumber\":null,\"applicationSource\":\"GPAPI\",\"emailBol\":true,\"partnerIdentifierCode\":\"2-1-HEATDEIA\"})\r\n\r\n};\r\nrequest(options, function (error, response) { \r\n  if (error) throw new Error(error);\r\n  console.log(response.body);\r\n});\r\n"
+            "source": "var request = require('request');\r\nvar options = {\r\n  'method': 'POST',\r\n  'url': 'https:\/\/api-uat-xpoconnect.xpo.com\/quoteAPI\/rest\/v1\/ConvertToOrder',\r\n  'headers': {\r\n    'x-api-key': 'XXXXXXXXXXXXXXXXXXXXXXXXXXX',\r\n    'xpoauthorization': 'Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX',\r\n    'Content-Type': 'application\/json'\r\n  },\r\n  body: JSON.stringify({\"orderDate\":\"2020-02-13T12:08:09.31\",\"accountId\":223,\"contractId\":null,\"specialRequirements\":[],\"orderReferenceNumbers\":[{\"code\":\"PO\",\"type\":\"PO\",\"value\":\"8525\"}],\"orderNotes\":[{\"type\":\"Reason\",\"value\":\"BRNCH FLT\/MAX CAPACTY\"}],\"orderContactInformations\":[{\"firstName\":\"TestData\",\"lastName\":\"Lname\",\"email\":\"devcustomer@gmail.com(opens in new tab)\",\"phoneNumbers\":[{\"type\":\"Mobile\",\"number\":\"6606546565\"}],\"title\":\"Mr\",\"isPrimary\":true}],\"orderServices\":[{\"code\":\"12151\",\"name\":\"Room of Choice Delivery\",\"description\":\"Base delivery charge for IKEA.\",\"quantity\":1,\"unitofMeasure\":\"Items Hauled Away\"}],\"orderDocuments\":[{\"type\":\"30\",\"name\":\"28-FEB-2019.xlsx\",\"key\":\"0000040VD7CES000000000\"}],\"crossSellOrderNumber\":\"\",\"salesReps\":[{\"firstName\":\"TestData\",\"lastName\":\"Lname\",\"email\":\"devcustomer@gmail.com(opens in new tab)\",\"phoneNumbers\":[{\"type\":\"Mobile\",\"number\":\"6606546565\"}],\"title\":\"\",\"isPrimary\":false}],\"stops\":[{\"addressInformation\":{\"locationId\":\"TESTCH30\",\"locationName\":\"Test 1\",\"locationType\":\"Warehouse\",\"addressLine1\":\"1800 North Clybourn Avenue\",\"addressLine2\":\"\",\"cityName\":\"Chicago\",\"countryCode\":\"USA\",\"geoCodes\":{\"longitude\":null,\"latitude\":null,\"s2cellId\":null},\"stateCode\":\"IL\",\"zipCode\":\"60606\",\"region\":null,\"utcOffset\":\"-04:00:00\"},\"scheduledTimeFrom\":\"2020-11-25T21:23:53\",\"sequenceNo\":1,\"scheduledTimeTo\":null,\"type\":\"PICKUP\",\"isAppointmentRequired\":false,\"isAppointmentConfirmed\":false,\"specialRequirements\":[{\"type\":\"LIFTGATE\",\"value\":\"1\"}],\"stopReferenceNumbers\":[{\"code\":\"PO\",\"type\":\"PO\",\"value\":\"8525\"}],\"note\":[{\"type\":\"Reason\",\"value\":\"BRNCH FLT\/MAX CAPACTY\"}],\"stopContactInformations\":[{\"firstName\":\"TestData\",\"lastName\":\"Lname\",\"email\":\"devcustomer@gmail.com\",\"phoneNumbers\":[{\"type\":\"Mobile\",\"number\":\"7894561230\"}],\"title\":\"\",\"isPrimary\":true}]},{\"addressInformation\":{\"locationId\":\"TESTNOO8\",\"locationName\":\"Test 2\",\"locationType\":\"Warehouse\",\"addressLine1\":\"North Ridgeville Soccer Complex\",\"addressLine2\":\"\",\"cityName\":\"North Ridgeville\",\"countryCode\":\"USA\",\"geoCodes\":{\"longitude\":null,\"latitude\":null,\"s2cellId\":null},\"stateCode\":\"OH\",\"zipCode\":\"44039\",\"region\":null,\"utcOffset\":\"-04:00:00\"},\"scheduledTimeFrom\":\"2020-12-14T22:23:53\",\"sequenceNo\":2,\"scheduledTimeTo\":null,\"type\":\"DELIVERY\",\"isAppointmentRequired\":false,\"isAppointmentConfirmed\":false,\"specialRequirements\":[{\"type\":\"LIFTGATE\",\"value\":\"1\"}],\"stopReferenceNumbers\":[{\"code\":\"PO\",\"type\":\"PO\",\"value\":\"8525\"}],\"note\":[{\"type\":\"Reason\",\"value\":\"BRNCH FLT\/MAX CAPACTY\"}],\"stopContactInformations\":[{\"firstName\":\"TestData \",\"lastName\":\"SO\",\"email\":\"devcustomer@gmail.com\",\"phoneNumbers\":[{\"type\":\"Mobile\",\"number\":\"3312244433\"}],\"title\":\"\",\"isPrimary\":true}]}],\"requestedDeliveryDate\":\"2020-02-27T15:00:00\",\"transportationMode\":\"TL\",\"items\":[{\"itemCode\":\"OTHER\",\"itemNumber\":\"100056006\",\"itemDescription\":\"CONCRETE BUCKET 1\/2 YD\",\"units\":15,\"unitTypeCode\":\"PLTS\",\"packageUnits\":2,\"packageTypeCode\":\"BAG\",\"weight\":4000,\"weightUomCode\":\"LB\",\"height\":99.999,\"heightUomCode\":\"IN\",\"length\":99,\"lengthUomCode\":\"IN\",\"width\":150,\"widthUomCode\":\"IN\",\"declaredValue\":4000,\"declaredValueCurrencyCode\":\"USD\",\"volume\":868.0386,\"volumeUomCode\":\"CUFT\",\"itemPrice\":20.5,\"itemPriceCurrencyCode\":\"USD\",\"isTemperatureControlled\":false,\"temperatureInformation\":{\"high\":null,\"low\":null,\"highUom\":null,\"lowUom\":null},\"isHazmat\":false,\"hazardousItemInfo\":{\"unnumber\":0,\"packingGroup\":null,\"receptacleSize\":0,\"hazardousClass\":null,\"numberofReceptacles\":0,\"unitofMeasure\":null,\"containerType\":null,\"hazardousDescription\":null,\"hazardousPhoneNumber\":null,\"shippingName\":null},\"htscode\":null,\"sku\":\"Sku00001\",\"purchaseOrderNumber\":null,\"isOversized\":null,\"isStackable\":null,\"itemReferenceNumbers\":[{\"code\":\"AN\",\"type\":\"AN\",\"value\":\"8525 - GRANDE PRAIRIE PRO\"}],\"itemNotes\":[{\"type\":\"Reason\",\"value\":\"BRNCH FLT\/MAX CAPACTY\"}],\"itemServices\":[{\"code\":\"12151\",\"name\":\"Room of Choice Delivery\",\"description\":\"Base delivery charge for IKEA.\",\"quantity\":1,\"unitofMeasure\":\"Items Hauled Away\"}]}],\"isPartOfConsolidatedShipment\":false,\"ordersOnConsolidatedShipment\":1,\"isExpedited\":false,\"isXpoManaged\":true,\"paymentCode\":\"PPD\",\"equipmentTypeCode\":\"DT\",\"equipmentCategoryCode\":\"VN\",\"quoteId\":\"0000183774\",\"invoiceDate\":null,\"invoiceNumber\":null,\"applicationSource\":\"GPAPI\",\"emailBol\":true,\"partnerIdentifierCode\":\"2-1-HEATDEIA\"})\r\n\r\n};\r\nrequest(options, function (error, response) { \r\n  if (error) throw new Error(error);\r\n  console.log(response.body);\r\n});\r\n"
           },
           {
             "lang": "C#",
-            "source": "var client = new RestClient(\"https:\/\/api-uat-xpoconnect.xpo.com\/quoteAPI\/rest\/v1\/ConvertToOrder\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"x-api-key\", \"XXXXXXXXXXXXXXXXXXXXXXXXXXX\");\r\nrequest.AddHeader(\"xpoauthorization\", \"Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX\");\r\nrequest.AddHeader(\"Content-Type\", \"application\/json\");\r\nrequest.AddParameter(\"application\/json\", \"{\\r\\n    \\\"orderDate\\\": \\\"2020-02-13T12:08:09.31\\\",\\r\\n    \\\"accountId\\\": 223,\\r\\n    \\\"contractId\\\": null,\\r\\n    \\\"specialRequirements\\\": [],\\r\\n    \\\"orderReferenceNumbers\\\": [\\r\\n        {\\r\\n            \\\"code\\\": \\\"PO\\\",\\r\\n            \\\"type\\\": \\\"PO\\\",\\r\\n            \\\"value\\\": \\\"8525\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderNotes\\\": [\\r\\n        {\\r\\n            \\\"type\\\": \\\"Reason\\\",\\r\\n            \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderContactInformations\\\": [\\r\\n        {\\r\\n            \\\"firstName\\\": \\\"TestData\\\",\\r\\n            \\\"lastName\\\": \\\"Lname\\\",\\r\\n            \\\"email\\\": \\\"devcustomer@gmail.com(opens in new tab)\\\",\\r\\n            \\\"phoneNumbers\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Mobile\\\",\\r\\n                    \\\"number\\\": \\\"6606546565\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"title\\\": \\\"Mr\\\",\\r\\n            \\\"isPrimary\\\": true\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderServices\\\": [\\r\\n        {\\r\\n            \\\"code\\\": \\\"12151\\\",\\r\\n            \\\"name\\\": \\\"Room of Choice Delivery\\\",\\r\\n            \\\"description\\\": \\\"Base delivery charge for IKEA.\\\",\\r\\n            \\\"quantity\\\": 1,\\r\\n            \\\"unitofMeasure\\\": \\\"Items Hauled Away\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderDocuments\\\": [\\r\\n        {\\r\\n            \\\"type\\\": \\\"30\\\",\\r\\n            \\\"name\\\": \\\"28-FEB-2019.xlsx\\\",\\r\\n            \\\"key\\\": \\\"0000040VD7CES000000000\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"crossSellOrderNumber\\\": \\\"\\\",\\r\\n    \\\"salesReps\\\": [\\r\\n        {\\r\\n            \\\"firstName\\\": \\\"TestData\\\",\\r\\n            \\\"lastName\\\": \\\"Lname\\\",\\r\\n            \\\"email\\\": \\\"devcustomer@gmail.com(opens in new tab)\\\",\\r\\n            \\\"phoneNumbers\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Mobile\\\",\\r\\n                    \\\"number\\\": \\\"6606546565\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"title\\\": \\\"\\\",\\r\\n            \\\"isPrimary\\\": false\\r\\n        }\\r\\n    ],\\r\\n    \\\"stops\\\": [\\r\\n        {\\r\\n            \\\"addressInformation\\\": {\\r\\n                \\\"locationId\\\": \\\"TESTCH30\\\",\\r\\n                \\\"locationName\\\": \\\"Test 1\\\",\\r\\n                \\\"locationType\\\": \\\"Warehouse\\\",\\r\\n                \\\"addressLine1\\\": \\\"1800 North Clybourn Avenue\\\",\\r\\n                \\\"addressLine2\\\": \\\"\\\",\\r\\n                \\\"cityName\\\": \\\"Chicago\\\",\\r\\n                \\\"countryCode\\\": \\\"USA\\\",\\r\\n                \\\"geoCodes\\\": {\\r\\n                    \\\"longitude\\\": null,\\r\\n                    \\\"latitude\\\": null,\\r\\n                    \\\"s2cellId\\\": null\\r\\n                },\\r\\n                \\\"stateCode\\\": \\\"IL\\\",\\r\\n                \\\"zipCode\\\": \\\"60606\\\",\\r\\n                \\\"region\\\": null,\\r\\n                \\\"utcOffset\\\": \\\"-04:00:00\\\"\\r\\n            },\\r\\n            \\\"scheduledTimeFrom\\\": \\\"2020-11-25T21:23:53\\\",\\r\\n            \\\"stopSequence\\\": 1,\\r\\n            \\\"scheduledTimeTo\\\": null,\\r\\n            \\\"type\\\": \\\"PICKUP\\\",\\r\\n            \\\"isAppointmentRequired\\\": false,\\r\\n            \\\"isAppointmentConfirmed\\\": false,\\r\\n            \\\"specialRequirements\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"LIFTGATE\\\",\\r\\n                    \\\"value\\\": \\\"1\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"PO\\\",\\r\\n                    \\\"type\\\": \\\"PO\\\",\\r\\n                    \\\"value\\\": \\\"8525\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopNotes\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopContactInformations\\\": [\\r\\n                {\\r\\n                    \\\"firstName\\\": \\\"TestData\\\",\\r\\n                    \\\"lastName\\\": \\\"Lname\\\",\\r\\n                    \\\"email\\\": \\\"devcustomer@gmail.com\\\",\\r\\n                    \\\"phoneNumbers\\\": [\\r\\n                        {\\r\\n                            \\\"type\\\": \\\"Mobile\\\",\\r\\n                            \\\"number\\\": \\\"7894561230\\\"\\r\\n                        }\\r\\n                    ],\\r\\n                    \\\"title\\\": \\\"\\\",\\r\\n                    \\\"isPrimary\\\": true\\r\\n                }\\r\\n            ]\\r\\n        },\\r\\n        {\\r\\n            \\\"addressInformation\\\": {\\r\\n                \\\"locationId\\\": \\\"TESTNOO8\\\",\\r\\n                \\\"locationName\\\": \\\"Test 2\\\",\\r\\n                \\\"locationType\\\": \\\"Warehouse\\\",\\r\\n                \\\"addressLine1\\\": \\\"North Ridgeville Soccer Complex\\\",\\r\\n                \\\"addressLine2\\\": \\\"\\\",\\r\\n                \\\"cityName\\\": \\\"North Ridgeville\\\",\\r\\n                \\\"countryCode\\\": \\\"USA\\\",\\r\\n                \\\"geoCodes\\\": {\\r\\n                    \\\"longitude\\\": null,\\r\\n                    \\\"latitude\\\": null,\\r\\n                    \\\"s2cellId\\\": null\\r\\n                },\\r\\n                \\\"stateCode\\\": \\\"OH\\\",\\r\\n                \\\"zipCode\\\": \\\"44039\\\",\\r\\n                \\\"region\\\": null,\\r\\n                \\\"utcOffset\\\": \\\"-04:00:00\\\"\\r\\n            },\\r\\n            \\\"scheduledTimeFrom\\\": \\\"2020-12-14T22:23:53\\\",\\r\\n            \\\"stopSequence\\\": 2,\\r\\n            \\\"scheduledTimeTo\\\": null,\\r\\n            \\\"type\\\": \\\"DELIVERY\\\",\\r\\n            \\\"isAppointmentRequired\\\": false,\\r\\n            \\\"isAppointmentConfirmed\\\": false,\\r\\n            \\\"specialRequirements\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"LIFTGATE\\\",\\r\\n                    \\\"value\\\": \\\"1\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"PO\\\",\\r\\n                    \\\"type\\\": \\\"PO\\\",\\r\\n                    \\\"value\\\": \\\"8525\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopNotes\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopContactInformations\\\": [\\r\\n                {\\r\\n                    \\\"firstName\\\": \\\"TestData \\\",\\r\\n                    \\\"lastName\\\": \\\"SO\\\",\\r\\n                    \\\"email\\\": \\\"devcustomer@gmail.com\\\",\\r\\n                    \\\"phoneNumbers\\\": [\\r\\n                        {\\r\\n                            \\\"type\\\": \\\"Mobile\\\",\\r\\n                            \\\"number\\\": \\\"3312244433\\\"\\r\\n                        }\\r\\n                    ],\\r\\n                    \\\"title\\\": \\\"\\\",\\r\\n                    \\\"isPrimary\\\": true\\r\\n                }\\r\\n            ]\\r\\n        }\\r\\n    ],\\r\\n    \\\"requestedDeliveryDate\\\": \\\"2020-02-27T15:00:00\\\",\\r\\n    \\\"transportationMode\\\": \\\"TL\\\",\\r\\n    \\\"items\\\": [\\r\\n        {\\r\\n            \\\"itemCode\\\": \\\"OTHER\\\",\\r\\n            \\\"itemNumber\\\": \\\"100056006\\\",\\r\\n            \\\"itemDescription\\\": \\\"CONCRETE BUCKET 1\\\\\/2 YD\\\",\\r\\n            \\\"units\\\": 15,\\r\\n            \\\"unitTypeCode\\\": \\\"PLTS\\\",\\r\\n            \\\"packageUnits\\\": 2,\\r\\n            \\\"packageTypeCode\\\": \\\"BAG\\\",\\r\\n            \\\"weight\\\": 4000,\\r\\n            \\\"weightUomCode\\\": \\\"LB\\\",\\r\\n            \\\"height\\\": 99.998999999999995225152815692126750946044921875,\\r\\n            \\\"heightUomCode\\\": \\\"IN\\\",\\r\\n            \\\"length\\\": 99,\\r\\n            \\\"lengthUomCode\\\": \\\"IN\\\",\\r\\n            \\\"width\\\": 150,\\r\\n            \\\"widthUomCode\\\": \\\"IN\\\",\\r\\n            \\\"declaredValue\\\": 4000,\\r\\n            \\\"declaredValueCurrencyCode\\\": \\\"USD\\\",\\r\\n            \\\"volume\\\": 868.0385999999999739884515292942523956298828125,\\r\\n            \\\"volumeUomCode\\\": \\\"CUFT\\\",\\r\\n            \\\"itemPrice\\\": 20.5,\\r\\n            \\\"itemPriceCurrencyCode\\\": \\\"USD\\\",\\r\\n            \\\"isTemperatureControlled\\\": false,\\r\\n            \\\"temperatureInformation\\\": {\\r\\n                \\\"high\\\": null,\\r\\n                \\\"low\\\": null,\\r\\n                \\\"highUom\\\": null,\\r\\n                \\\"lowUom\\\": null\\r\\n            },\\r\\n            \\\"isHazmat\\\": false,\\r\\n            \\\"hazardousItemInfo\\\": {\\r\\n                \\\"unnumber\\\": 0,\\r\\n                \\\"packingGroup\\\": null,\\r\\n                \\\"receptacleSize\\\": 0,\\r\\n                \\\"hazardousClass\\\": null,\\r\\n                \\\"numberofReceptacles\\\": 0,\\r\\n                \\\"unitofMeasure\\\": null,\\r\\n                \\\"containerType\\\": null,\\r\\n                \\\"hazardousDescription\\\": null,\\r\\n                \\\"hazardousPhoneNumber\\\": null,\\r\\n                \\\"shippingName\\\": null\\r\\n            },\\r\\n            \\\"htscode\\\": null,\\r\\n            \\\"sku\\\": \\\"Sku00001\\\",\\r\\n            \\\"purchaseOrderNumber\\\": null,\\r\\n            \\\"isOversized\\\": null,\\r\\n            \\\"isStackable\\\": null,\\r\\n            \\\"itemReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"AN\\\",\\r\\n                    \\\"type\\\": \\\"AN\\\",\\r\\n                    \\\"value\\\": \\\"8525 - GRANDE PRAIRIE PRO\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"itemNotes\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"itemServices\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"12151\\\",\\r\\n                    \\\"name\\\": \\\"Room of Choice Delivery\\\",\\r\\n                    \\\"description\\\": \\\"Base delivery charge for IKEA.\\\",\\r\\n                    \\\"quantity\\\": 1,\\r\\n                    \\\"unitofMeasure\\\": \\\"Items Hauled Away\\\"\\r\\n                }\\r\\n            ]\\r\\n        }\\r\\n    ],\\r\\n    \\\"isPartOfConsolidatedShipment\\\": false,\\r\\n    \\\"ordersOnConsolidatedShipment\\\": 1,\\r\\n    \\\"isExpedited\\\": false,\\r\\n    \\\"isXpoManaged\\\": true,\\r\\n    \\\"paymentCode\\\": \\\"PPD\\\",\\r\\n    \\\"equipmentTypeCode\\\": \\\"DT\\\",\\r\\n    \\\"equipmentCategoryCode\\\": \\\"VN\\\",\\r\\n    \\\"quoteId\\\": \\\"0000183774\\\",\\r\\n    \\\"invoiceDate\\\": null,\\r\\n    \\\"invoiceNumber\\\": null,\\r\\n    \\\"applicationSource\\\": \\\"GPAPI\\\",\\r\\n    \\\"emailBol\\\": true,\\r\\n    \\\"partnerIdentifierCode\\\": \\\"2-1-HEATDEIA\\\"\\r\\n}\",  ParameterType.RequestBody);\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
+            "source": "var client = new RestClient(\"https:\/\/api-uat-xpoconnect.xpo.com\/quoteAPI\/rest\/v1\/ConvertToOrder\");\r\nclient.Timeout = -1;\r\nvar request = new RestRequest(Method.POST);\r\nrequest.AddHeader(\"x-api-key\", \"XXXXXXXXXXXXXXXXXXXXXXXXXXX\");\r\nrequest.AddHeader(\"xpoauthorization\", \"Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXX\");\r\nrequest.AddHeader(\"Content-Type\", \"application\/json\");\r\nrequest.AddParameter(\"application\/json\", \"{\\r\\n    \\\"orderDate\\\": \\\"2020-02-13T12:08:09.31\\\",\\r\\n    \\\"accountId\\\": 223,\\r\\n    \\\"contractId\\\": null,\\r\\n    \\\"specialRequirements\\\": [],\\r\\n    \\\"orderReferenceNumbers\\\": [\\r\\n        {\\r\\n            \\\"code\\\": \\\"PO\\\",\\r\\n            \\\"type\\\": \\\"PO\\\",\\r\\n            \\\"value\\\": \\\"8525\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderNotes\\\": [\\r\\n        {\\r\\n            \\\"type\\\": \\\"Reason\\\",\\r\\n            \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderContactInformations\\\": [\\r\\n        {\\r\\n            \\\"firstName\\\": \\\"TestData\\\",\\r\\n            \\\"lastName\\\": \\\"Lname\\\",\\r\\n            \\\"email\\\": \\\"devcustomer@gmail.com(opens in new tab)\\\",\\r\\n            \\\"phoneNumbers\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Mobile\\\",\\r\\n                    \\\"number\\\": \\\"6606546565\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"title\\\": \\\"Mr\\\",\\r\\n            \\\"isPrimary\\\": true\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderServices\\\": [\\r\\n        {\\r\\n            \\\"code\\\": \\\"12151\\\",\\r\\n            \\\"name\\\": \\\"Room of Choice Delivery\\\",\\r\\n            \\\"description\\\": \\\"Base delivery charge for IKEA.\\\",\\r\\n            \\\"quantity\\\": 1,\\r\\n            \\\"unitofMeasure\\\": \\\"Items Hauled Away\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"orderDocuments\\\": [\\r\\n        {\\r\\n            \\\"type\\\": \\\"30\\\",\\r\\n            \\\"name\\\": \\\"28-FEB-2019.xlsx\\\",\\r\\n            \\\"key\\\": \\\"0000040VD7CES000000000\\\"\\r\\n        }\\r\\n    ],\\r\\n    \\\"crossSellOrderNumber\\\": \\\"\\\",\\r\\n    \\\"salesReps\\\": [\\r\\n        {\\r\\n            \\\"firstName\\\": \\\"TestData\\\",\\r\\n            \\\"lastName\\\": \\\"Lname\\\",\\r\\n            \\\"email\\\": \\\"devcustomer@gmail.com(opens in new tab)\\\",\\r\\n            \\\"phoneNumbers\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Mobile\\\",\\r\\n                    \\\"number\\\": \\\"6606546565\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"title\\\": \\\"\\\",\\r\\n            \\\"isPrimary\\\": false\\r\\n        }\\r\\n    ],\\r\\n    \\\"stops\\\": [\\r\\n        {\\r\\n            \\\"addressInformation\\\": {\\r\\n                \\\"locationId\\\": \\\"TESTCH30\\\",\\r\\n                \\\"locationName\\\": \\\"Test 1\\\",\\r\\n                \\\"locationType\\\": \\\"Warehouse\\\",\\r\\n                \\\"addressLine1\\\": \\\"1800 North Clybourn Avenue\\\",\\r\\n                \\\"addressLine2\\\": \\\"\\\",\\r\\n                \\\"cityName\\\": \\\"Chicago\\\",\\r\\n                \\\"countryCode\\\": \\\"USA\\\",\\r\\n                \\\"geoCodes\\\": {\\r\\n                    \\\"longitude\\\": null,\\r\\n                    \\\"latitude\\\": null,\\r\\n                    \\\"s2cellId\\\": null\\r\\n                },\\r\\n                \\\"stateCode\\\": \\\"IL\\\",\\r\\n                \\\"zipCode\\\": \\\"60606\\\",\\r\\n                \\\"region\\\": null,\\r\\n                \\\"utcOffset\\\": \\\"-04:00:00\\\"\\r\\n            },\\r\\n            \\\"scheduledTimeFrom\\\": \\\"2020-11-25T21:23:53\\\",\\r\\n            \\\"sequenceNo\\\": 1,\\r\\n            \\\"scheduledTimeTo\\\": null,\\r\\n            \\\"type\\\": \\\"PICKUP\\\",\\r\\n            \\\"isAppointmentRequired\\\": false,\\r\\n            \\\"isAppointmentConfirmed\\\": false,\\r\\n            \\\"specialRequirements\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"LIFTGATE\\\",\\r\\n                    \\\"value\\\": \\\"1\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"PO\\\",\\r\\n                    \\\"type\\\": \\\"PO\\\",\\r\\n                    \\\"value\\\": \\\"8525\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"note\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopContactInformations\\\": [\\r\\n                {\\r\\n                    \\\"firstName\\\": \\\"TestData\\\",\\r\\n                    \\\"lastName\\\": \\\"Lname\\\",\\r\\n                    \\\"email\\\": \\\"devcustomer@gmail.com\\\",\\r\\n                    \\\"phoneNumbers\\\": [\\r\\n                        {\\r\\n                            \\\"type\\\": \\\"Mobile\\\",\\r\\n                            \\\"number\\\": \\\"7894561230\\\"\\r\\n                        }\\r\\n                    ],\\r\\n                    \\\"title\\\": \\\"\\\",\\r\\n                    \\\"isPrimary\\\": true\\r\\n                }\\r\\n            ]\\r\\n        },\\r\\n        {\\r\\n            \\\"addressInformation\\\": {\\r\\n                \\\"locationId\\\": \\\"TESTNOO8\\\",\\r\\n                \\\"locationName\\\": \\\"Test 2\\\",\\r\\n                \\\"locationType\\\": \\\"Warehouse\\\",\\r\\n                \\\"addressLine1\\\": \\\"North Ridgeville Soccer Complex\\\",\\r\\n                \\\"addressLine2\\\": \\\"\\\",\\r\\n                \\\"cityName\\\": \\\"North Ridgeville\\\",\\r\\n                \\\"countryCode\\\": \\\"USA\\\",\\r\\n                \\\"geoCodes\\\": {\\r\\n                    \\\"longitude\\\": null,\\r\\n                    \\\"latitude\\\": null,\\r\\n                    \\\"s2cellId\\\": null\\r\\n                },\\r\\n                \\\"stateCode\\\": \\\"OH\\\",\\r\\n                \\\"zipCode\\\": \\\"44039\\\",\\r\\n                \\\"region\\\": null,\\r\\n                \\\"utcOffset\\\": \\\"-04:00:00\\\"\\r\\n            },\\r\\n            \\\"scheduledTimeFrom\\\": \\\"2020-12-14T22:23:53\\\",\\r\\n            \\\"sequenceNo\\\": 2,\\r\\n            \\\"scheduledTimeTo\\\": null,\\r\\n            \\\"type\\\": \\\"DELIVERY\\\",\\r\\n            \\\"isAppointmentRequired\\\": false,\\r\\n            \\\"isAppointmentConfirmed\\\": false,\\r\\n            \\\"specialRequirements\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"LIFTGATE\\\",\\r\\n                    \\\"value\\\": \\\"1\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"PO\\\",\\r\\n                    \\\"type\\\": \\\"PO\\\",\\r\\n                    \\\"value\\\": \\\"8525\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"note\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"stopContactInformations\\\": [\\r\\n                {\\r\\n                    \\\"firstName\\\": \\\"TestData \\\",\\r\\n                    \\\"lastName\\\": \\\"SO\\\",\\r\\n                    \\\"email\\\": \\\"devcustomer@gmail.com\\\",\\r\\n                    \\\"phoneNumbers\\\": [\\r\\n                        {\\r\\n                            \\\"type\\\": \\\"Mobile\\\",\\r\\n                            \\\"number\\\": \\\"3312244433\\\"\\r\\n                        }\\r\\n                    ],\\r\\n                    \\\"title\\\": \\\"\\\",\\r\\n                    \\\"isPrimary\\\": true\\r\\n                }\\r\\n            ]\\r\\n        }\\r\\n    ],\\r\\n    \\\"requestedDeliveryDate\\\": \\\"2020-02-27T15:00:00\\\",\\r\\n    \\\"transportationMode\\\": \\\"TL\\\",\\r\\n    \\\"items\\\": [\\r\\n        {\\r\\n            \\\"itemCode\\\": \\\"OTHER\\\",\\r\\n            \\\"itemNumber\\\": \\\"100056006\\\",\\r\\n            \\\"itemDescription\\\": \\\"CONCRETE BUCKET 1\\\\\/2 YD\\\",\\r\\n            \\\"units\\\": 15,\\r\\n            \\\"unitTypeCode\\\": \\\"PLTS\\\",\\r\\n            \\\"packageUnits\\\": 2,\\r\\n            \\\"packageTypeCode\\\": \\\"BAG\\\",\\r\\n            \\\"weight\\\": 4000,\\r\\n            \\\"weightUomCode\\\": \\\"LB\\\",\\r\\n            \\\"height\\\": 99.998999999999995225152815692126750946044921875,\\r\\n            \\\"heightUomCode\\\": \\\"IN\\\",\\r\\n            \\\"length\\\": 99,\\r\\n            \\\"lengthUomCode\\\": \\\"IN\\\",\\r\\n            \\\"width\\\": 150,\\r\\n            \\\"widthUomCode\\\": \\\"IN\\\",\\r\\n            \\\"declaredValue\\\": 4000,\\r\\n            \\\"declaredValueCurrencyCode\\\": \\\"USD\\\",\\r\\n            \\\"volume\\\": 868.0385999999999739884515292942523956298828125,\\r\\n            \\\"volumeUomCode\\\": \\\"CUFT\\\",\\r\\n            \\\"itemPrice\\\": 20.5,\\r\\n            \\\"itemPriceCurrencyCode\\\": \\\"USD\\\",\\r\\n            \\\"isTemperatureControlled\\\": false,\\r\\n            \\\"temperatureInformation\\\": {\\r\\n                \\\"high\\\": null,\\r\\n                \\\"low\\\": null,\\r\\n                \\\"highUom\\\": null,\\r\\n                \\\"lowUom\\\": null\\r\\n            },\\r\\n            \\\"isHazmat\\\": false,\\r\\n            \\\"hazardousItemInfo\\\": {\\r\\n                \\\"unnumber\\\": 0,\\r\\n                \\\"packingGroup\\\": null,\\r\\n                \\\"receptacleSize\\\": 0,\\r\\n                \\\"hazardousClass\\\": null,\\r\\n                \\\"numberofReceptacles\\\": 0,\\r\\n                \\\"unitofMeasure\\\": null,\\r\\n                \\\"containerType\\\": null,\\r\\n                \\\"hazardousDescription\\\": null,\\r\\n                \\\"hazardousPhoneNumber\\\": null,\\r\\n                \\\"shippingName\\\": null\\r\\n            },\\r\\n            \\\"htscode\\\": null,\\r\\n            \\\"sku\\\": \\\"Sku00001\\\",\\r\\n            \\\"purchaseOrderNumber\\\": null,\\r\\n            \\\"isOversized\\\": null,\\r\\n            \\\"isStackable\\\": null,\\r\\n            \\\"itemReferenceNumbers\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"AN\\\",\\r\\n                    \\\"type\\\": \\\"AN\\\",\\r\\n                    \\\"value\\\": \\\"8525 - GRANDE PRAIRIE PRO\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"itemNotes\\\": [\\r\\n                {\\r\\n                    \\\"type\\\": \\\"Reason\\\",\\r\\n                    \\\"value\\\": \\\"BRNCH FLT\\\\\/MAX CAPACTY\\\"\\r\\n                }\\r\\n            ],\\r\\n            \\\"itemServices\\\": [\\r\\n                {\\r\\n                    \\\"code\\\": \\\"12151\\\",\\r\\n                    \\\"name\\\": \\\"Room of Choice Delivery\\\",\\r\\n                    \\\"description\\\": \\\"Base delivery charge for IKEA.\\\",\\r\\n                    \\\"quantity\\\": 1,\\r\\n                    \\\"unitofMeasure\\\": \\\"Items Hauled Away\\\"\\r\\n                }\\r\\n            ]\\r\\n        }\\r\\n    ],\\r\\n    \\\"isPartOfConsolidatedShipment\\\": false,\\r\\n    \\\"ordersOnConsolidatedShipment\\\": 1,\\r\\n    \\\"isExpedited\\\": false,\\r\\n    \\\"isXpoManaged\\\": true,\\r\\n    \\\"paymentCode\\\": \\\"PPD\\\",\\r\\n    \\\"equipmentTypeCode\\\": \\\"DT\\\",\\r\\n    \\\"equipmentCategoryCode\\\": \\\"VN\\\",\\r\\n    \\\"quoteId\\\": \\\"0000183774\\\",\\r\\n    \\\"invoiceDate\\\": null,\\r\\n    \\\"invoiceNumber\\\": null,\\r\\n    \\\"applicationSource\\\": \\\"GPAPI\\\",\\r\\n    \\\"emailBol\\\": true,\\r\\n    \\\"partnerIdentifierCode\\\": \\\"2-1-HEATDEIA\\\"\\r\\n}\",  ParameterType.RequestBody);\r\nIRestResponse response = client.Execute(request);\r\nConsole.WriteLine(response.Content);"
           }
         ],
         "responses": {
@@ -730,7 +728,7 @@
                 "country": "USA",
                 "zipCode": "44039"
               },
-              "type": 1,
+              "type": "Pickup",
               "scheduledTimeFrom": "2020-05-28T00:00:00-04:00",
               "scheduledTimeTo": "2020-05-30T00:00:00-04:00",
               "specialRequirement": [
@@ -753,7 +751,7 @@
                   "isPrimary": false
                 }
               ],
-              "note": "",
+              "note": {},
               "stopReferenceNumbers": [
                 {
                   "typeCode": "",
@@ -773,7 +771,7 @@
                 "country": "USA",
                 "zipCode": "60606"
               },
-              "type": 3,
+              "type": "Delivery",
               "scheduledTimeFrom": "2020-05-28T00:00:00-04:00",
               "scheduledTimeTo": "2020-05-30T00:00:00-04:00",
               "specialRequirement": [
@@ -990,6 +988,7 @@
                         "properties": {
                           "code": {
                             "type": "string",
+                            "enum": [ "LFD:Lift Gate Required Code ", "RSD:Residential Required Code" ],
                             "description": "Special requirement type."
                           },
                           "value": {
@@ -1018,8 +1017,20 @@
                       "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
                     },
                     "note": {
-                      "type": "string",
-                      "description": "Notes Associated with Stop."
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "Note's type."
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "Note's value."
+                          }
+                        }
+                      }
                     },
                     "sequenceNo": {
                       "type": "integer",
@@ -1337,7 +1348,21 @@
                         "properties": {
                           "code": {
                             "type": "string",
-                            "description": "Special requirement type."
+                            "description": "Special requirement type.",
+                            "enum": [
+                              "CHD: Church Required Code ",
+                              "CSD: Construction Site Required Code",
+                              "MLD: Military Required Code",
+                              "MND: Mine Required Code",
+                              "MID: Mini Storage Required Code",
+                              "NYC: NYC Surcharge Required Code",
+                              "APT: Appointment Required Code",
+                              "LFD: Lift Gate Required Code",
+                              "RSD: Residential Required Code",
+                              "ID: Inside Pickup Required Code",
+                              "SLD: School Required Code",
+                              "DROPTRAILER: Drop Trailer Required Code"
+                            ]
                           },
                           "value": {
                             "type": "string",
@@ -1365,8 +1390,20 @@
                       "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
                     },
                     "note": {
-                      "type": "string",
-                      "description": "Notes Associated with Stop."
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "Note's type."
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "Note's value."
+                          }
+                        }
+                      }
                     },
                     "sequenceNo": {
                       "type": "integer",
@@ -1571,6 +1608,13 @@
       },
       "convertquoterequest": {
         "type": "object",
+        "discriminator": {
+          "propertyName": "transportationMode",
+          "mapping": {
+            "TL": "#/components/schemas/TLStops",
+            "LTL": "#/components/schemas/LTLStops"
+          }
+        },
         "properties": {
           "orderId": {
             "type": "integer",
@@ -1810,168 +1854,6 @@
             },
             "description": "This object represents Sale's representative information."
 
-          },
-          "stops": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "addressInformations ": {
-                  "type": "object",
-                  "properties": {
-                    "locationId": {
-                      "type": "string",
-                      "description": "Id of location."
-                    },
-                    "locationName": {
-                      "type": "string",
-                      "description": "Name of location."
-                    },
-                    "addressLine1": {
-                      "type": "string",
-                      "description": "Address line 1 of stop location."
-                    },
-                    "addressLine2": {
-                      "type": "string",
-                      "description": "Address line 2 of stop location."
-                    },
-                    "cityName": {
-                      "type": "string",
-                      "description": "City name belongs to stop location."
-                    },
-                    "stateCode": {
-                      "type": "string",
-                      "description": "State code of the stop location."
-                    },
-                    "country": {
-                      "type": "string",
-                      "description": "Country belongs to stop location."
-                    },
-                    "zipCode": {
-                      "type": "string",
-                      "description": "Postal Code."
-                    }
-                  },
-                  "required": [
-                    "cityName",
-                    "country",
-                    "stateCode",
-                    "zipCode"
-                  ]
-                },
-                "type": {
-                  "type": "string",
-                  "description": "Type of stop.",
-                  "enum": [ "1:PICKUP", "2:INTERMEDIATE", "3:DELIVERY" ]
-                },
-                "scheduledTimeFrom": {
-                  "type": "string",
-                  "description": "The earliest time by which the service provider can reach the stop."
-                },
-                "scheduledTimeTo": {
-                  "type": "string",
-                  "description": "The Latest time by which the service provider can reach the stop."
-                },
-                "stopContactInformations": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "firstName": {
-                        "type": "string",
-                        "description": "First name of contact person."
-                      },
-                      "lastName": {
-                        "type": "string",
-                        "description": "Last name of contact person."
-                      },
-                      "email": {
-                        "type": "string",
-                        "description": "Email for communication."
-                      },
-                      "phoneNumbers": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "Type": {
-                              "type": "string",
-                              "description": "Phone number types.",
-                              "enum": [ "1:MOBILE", "2:WORK", "3:HOME" ]
-                            },
-                            "number": {
-                              "type": "string",
-                              "description": "Contact number."
-                            },
-                            "isPrimary": {
-                              "type": "boolean",
-                              "description": "Is contact primary information."
-                            }
-                          }
-                        },
-                        "description": "Primary and alternate numbers for communication."
-                      },
-                      "title": {
-                        "type": "string",
-                        "description": "Title of contact person."
-                      },
-                      "isPrimary": {
-                        "type": "boolean",
-                        "description": "Is it the primary contact information?."
-                      }
-                    }
-                  },
-                  "description": "Contact Information for each stop."
-                },
-                "specialRequirement": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "code": "string",
-                        "description": "Special requirement type."
-                      },
-                      "value": {
-                        "type": "string",
-                        "description": "Special requirements value."
-                      }
-                    }
-                  },
-                  "description": "The array of special requirements for this stop."
-                },
-                "stopReferenceNumbers": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "typeCode": {
-                        "type": "string",
-                        "description": "Stop Reference Type code."
-                      },
-                      "value": {
-                        "type": "string",
-                        "description": "Actual value of stop reference code."
-                      }
-                    }
-                  },
-                  "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
-                },
-                "note": {
-                  "type": "string",
-                  "description": "Notes Associated with Stop."
-                },
-                "sequenceNo": {
-                  "type": "integer",
-                  "description": "Stop sequence number, required Required only if multi stop quote request."
-                }
-              }
-            },
-            "description": "Stops information for this Quote including origin and destination.",
-            "required": [
-              "addressInformations",
-              "type"
-            ]
           },
           "items": {
             "type": "array",
@@ -2254,7 +2136,7 @@
               },
               "required": [ "itemCode" ]
             },
-            "description": "Notes Associated with Items."
+            "description": "Item Details."
           },
           "requestedDeliveryDate": {
             "type": "string",
@@ -2412,7 +2294,7 @@
                 "utcOffset": "-04:00:00"
               },
               "scheduledTimeFrom": "2020-11-25T21:23:53",
-              "stopSequence": 1,
+              "sequenceNo": 1,
               "scheduledTimeTo": null,
               "type": "PICKUP",
               "isAppointmentRequired": false,
@@ -2430,7 +2312,7 @@
                   "value": "8525"
                 }
               ],
-              "stopNotes": [
+              "note": [
                 {
                   "type": "Reason",
                   "value": "BRNCH FLT\/MAX CAPACTY"
@@ -2472,7 +2354,7 @@
                 "utcOffset": "-04:00:00"
               },
               "scheduledTimeFrom": "2020-12-14T22:23:53",
-              "stopSequence": 2,
+              "sequenceNo": 2,
               "scheduledTimeTo": null,
               "type": "DELIVERY",
               "isAppointmentRequired": false,
@@ -2490,7 +2372,7 @@
                   "value": "8525"
                 }
               ],
-              "stopNotes": [
+              "note": [
                 {
                   "type": "Reason",
                   "value": "BRNCH FLT\/MAX CAPACTY"
@@ -2601,6 +2483,393 @@
           "emailBol": true,
           "partnerIdentifierCode": "2-1-HEATDEIA"
         }
+      },
+      "TLStops": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/convertquoterequest"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "stops": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "addressInformations ": {
+                      "type": "object",
+                      "properties": {
+                        "locationId": {
+                          "type": "string",
+                          "description": "Id of location."
+                        },
+                        "locationName": {
+                          "type": "string",
+                          "description": "Name of location."
+                        },
+                        "addressLine1": {
+                          "type": "string",
+                          "description": "Address line 1 of stop location."
+                        },
+                        "addressLine2": {
+                          "type": "string",
+                          "description": "Address line 2 of stop location."
+                        },
+                        "cityName": {
+                          "type": "string",
+                          "description": "City name belongs to stop location."
+                        },
+                        "stateCode": {
+                          "type": "string",
+                          "description": "State code of the stop location."
+                        },
+                        "country": {
+                          "type": "string",
+                          "description": "Country belongs to stop location."
+                        },
+                        "zipCode": {
+                          "type": "string",
+                          "description": "Postal Code."
+                        }
+                      },
+                      "required": [
+                        "cityName",
+                        "country",
+                        "stateCode",
+                        "zipCode"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Type of stop.",
+                      "enum": [ "1:PICKUP", "2:INTERMEDIATE", "3:DELIVERY" ]
+                    },
+                    "scheduledTimeFrom": {
+                      "type": "string",
+                      "description": "The earliest time by which the service provider can reach the stop."
+                    },
+                    "scheduledTimeTo": {
+                      "type": "string",
+                      "description": "The Latest time by which the service provider can reach the stop."
+                    },
+                    "stopContactInformations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "firstName": {
+                            "type": "string",
+                            "description": "First name of contact person."
+                          },
+                          "lastName": {
+                            "type": "string",
+                            "description": "Last name of contact person."
+                          },
+                          "email": {
+                            "type": "string",
+                            "description": "Email for communication."
+                          },
+                          "phoneNumbers": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "Type": {
+                                  "type": "string",
+                                  "description": "Phone number types.",
+                                  "enum": [ "1:MOBILE", "2:WORK", "3:HOME" ]
+                                },
+                                "number": {
+                                  "type": "string",
+                                  "description": "Contact number."
+                                },
+                                "isPrimary": {
+                                  "type": "boolean",
+                                  "description": "Is contact primary information."
+                                }
+                              }
+                            },
+                            "description": "Primary and alternate numbers for communication."
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "Title of contact person."
+                          },
+                          "isPrimary": {
+                            "type": "boolean",
+                            "description": "Is it the primary contact information?."
+                          }
+                        }
+                      },
+                      "description": "Contact Information for each stop."
+                    },
+                    "specialRequirement": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "enum": [ "LFD:Lift Gate Required Code ", "RSD:Residential Required Code" ],
+                            "description": "Special requirement type."
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "Special requirements value."
+                          }
+                        }
+                      },
+                      "description": "The array of special requirements for this stop."
+                    },
+                    "stopReferenceNumbers": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "typeCode": {
+                            "type": "string",
+                            "description": "Stop Reference Type code."
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "Actual value of stop reference code."
+                          }
+                        }
+                      },
+                      "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
+                    },
+                    "note": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "Note's type."
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "Note's value."
+                          }
+                        }
+                      }
+                    },
+                    "sequenceNo": {
+                      "type": "integer",
+                      "description": "Stop sequence number, required Required only if multi stop quote request."
+                    }
+                  }
+                },
+                "description": "Stops information for this Quote including origin and destination.",
+                "required": [
+                  "addressInformations",
+                  "type"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "LTLStops": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/convertquoterequest"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "stops": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "addressInformations ": {
+                      "type": "object",
+                      "properties": {
+                        "locationId": {
+                          "type": "string",
+                          "description": "Id of location."
+                        },
+                        "locationName": {
+                          "type": "string",
+                          "description": "Name of location."
+                        },
+                        "addressLine1": {
+                          "type": "string",
+                          "description": "Address line 1 of stop location."
+                        },
+                        "addressLine2": {
+                          "type": "string",
+                          "description": "Address line 2 of stop location."
+                        },
+                        "cityName": {
+                          "type": "string",
+                          "description": "City name belongs to stop location."
+                        },
+                        "stateCode": {
+                          "type": "string",
+                          "description": "State code of the stop location."
+                        },
+                        "country": {
+                          "type": "string",
+                          "description": "Country belongs to stop location."
+                        },
+                        "zipCode": {
+                          "type": "string",
+                          "description": "Postal Code."
+                        }
+                      },
+                      "required": [
+                        "cityName",
+                        "country",
+                        "stateCode",
+                        "zipCode"
+                      ]
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Type of stop.",
+                      "enum": [ "1:PICKUP", "2:INTERMEDIATE", "3:DELIVERY" ]
+                    },
+                    "scheduledTimeFrom": {
+                      "type": "string",
+                      "description": "The earliest time by which the service provider can reach the stop."
+                    },
+                    "scheduledTimeTo": {
+                      "type": "string",
+                      "description": "The Latest time by which the service provider can reach the stop."
+                    },
+                    "stopContactInformations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "firstName": {
+                            "type": "string",
+                            "description": "First name of contact person."
+                          },
+                          "lastName": {
+                            "type": "string",
+                            "description": "Last name of contact person."
+                          },
+                          "email": {
+                            "type": "string",
+                            "description": "Email for communication."
+                          },
+                          "phoneNumbers": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "Type": {
+                                  "type": "string",
+                                  "description": "Phone number types.",
+                                  "enum": [ "1:MOBILE", "2:WORK", "3:HOME" ]
+                                },
+                                "number": {
+                                  "type": "string",
+                                  "description": "Contact number."
+                                },
+                                "isPrimary": {
+                                  "type": "boolean",
+                                  "description": "Is contact primary information."
+                                }
+                              }
+                            },
+                            "description": "Primary and alternate numbers for communication."
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "Title of contact person."
+                          },
+                          "isPrimary": {
+                            "type": "boolean",
+                            "description": "Is it the primary contact information?."
+                          }
+                        }
+                      },
+                      "description": "Contact Information for each stop."
+                    },
+                    "specialRequirement": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "code": {
+                            "type": "string",
+                            "description": "Special requirement type.",
+                            "enum": [
+                              "CHD: Church Required Code ",
+                              "CSD: Construction Site Required Code",
+                              "MLD: Military Required Code",
+                              "MND: Mine Required Code",
+                              "MID: Mini Storage Required Code",
+                              "NYC: NYC Surcharge Required Code",
+                              "APT: Appointment Required Code",
+                              "LFD: Lift Gate Required Code",
+                              "RSD: Residential Required Code",
+                              "ID: Inside Pickup Required Code",
+                              "SLD: School Required Code",
+                              "DROPTRAILER: Drop Trailer Required Code"
+                            ]
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "Special requirements value."
+                          }
+                        }
+                      },
+                      "description": "The array of special requirements for this stop."
+                    },
+                    "stopReferenceNumbers": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "typeCode": {
+                            "type": "string",
+                            "description": "Stop Reference Type code."
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "Actual value of stop reference code."
+                          }
+                        }
+                      },
+                      "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
+                    },
+                    "note": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "description": "Note's type."
+                          },
+                          "value": {
+                            "type": "string",
+                            "description": "Note's value."
+                          }
+                        }
+                      }
+                    },
+                    "sequenceNo": {
+                      "type": "integer",
+                      "description": "Stop sequence number, required Required only if multi stop quote request."
+                    }
+                  }
+                },
+                "description": "Stops information for this Quote including origin and destination.",
+                "required": [
+                  "addressInformations",
+                  "type"
+                ]
+              }
+            }
+          }
+        ]
       },
       "convertquoteresponse": {
         "properties": {
@@ -2802,7 +3071,7 @@
                   {
                     "quoteId": "0000278243",
                     "carrierCode": null,
-                    "carrierName": "Forward Air <96> Class Tariff",
+                    "carrierName": "Forward Air � Class Tariff",
                     "serviceLevel": "LTL",
                     "movementType": "DIRECT",
                     "estimatedTransitTime": 4,
@@ -3505,8 +3774,20 @@
                                     "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
                                   },
                                   "note": {
-                                    "type": "string",
-                                    "description": "Notes Associated with Stop."
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "type": {
+                                          "type": "string",
+                                          "description": "Note's type."
+                                        },
+                                        "value": {
+                                          "type": "string",
+                                          "description": "Note's value."
+                                        }
+                                      }
+                                    }
                                   },
                                   "sequenceNo": {
                                     "type": "integer",
@@ -3739,8 +4020,20 @@
                                   "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
                                 },
                                 "note": {
-                                  "type": "string",
-                                  "description": "Notes Associated with Stop."
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "type": {
+                                        "type": "string",
+                                        "description": "Note's type."
+                                      },
+                                      "value": {
+                                        "type": "string",
+                                        "description": "Note's value."
+                                      }
+                                    }
+                                  }
                                 },
                                 "sequenceNo": {
                                   "type": "integer",
@@ -3976,8 +4269,20 @@
                                   "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
                                 },
                                 "note": {
-                                  "type": "string",
-                                  "description": "Notes Associated with Stop."
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "type": {
+                                        "type": "string",
+                                        "description": "Note's type."
+                                      },
+                                      "value": {
+                                        "type": "string",
+                                        "description": "Note's value."
+                                      }
+                                    }
+                                  }
                                 },
                                 "sequenceNo": {
                                   "type": "integer",
@@ -4213,8 +4518,20 @@
                                   "description": "The collection of reference numbers associated with this stop, its type is same as order reference object."
                                 },
                                 "note": {
-                                  "type": "string",
-                                  "description": "Notes Associated with Stop."
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "type": {
+                                        "type": "string",
+                                        "description": "Note's type."
+                                      },
+                                      "value": {
+                                        "type": "string",
+                                        "description": "Note's value."
+                                      }
+                                    }
+                                  }
                                 },
                                 "sequenceNo": {
                                   "type": "integer",
